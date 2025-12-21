@@ -62,12 +62,12 @@ const PortfolioSection = () => {
         <div className='auz_bg'>
             <div className='max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px]'>
                 {/* Section Heading */}
-                <div className='flex flex-col lg:flex-row items-center gap-10 mb-10'>
+                <div className='flex flex-col lg:flex-row items-start lg:items-center gap-3 md:gap-4 lg:gap-10 mb-10'>
                     <div className='flex-1'>
-                        <h2 className='host-grotesk text-[43px] host-grotesk-semibold'>Our Portfolio</h2>
+                        <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>Our Portfolio</h2>
                     </div>
                     <div className='flex-1'>
-                        <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-[18px] text-justify leading-5'>
+                        <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] text-justify leading-5'>
                             Check out some of our recent Completed Projects
                         </p>
                     </div>
@@ -78,7 +78,9 @@ const PortfolioSection = () => {
                     {portfolioItems.map((item, index) => (
                         <div
                             key={index}
-                            className="group h-[366px] relative rounded-[15px] overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                            className="group 
+                            h-[260px] sm:h-[300px] lg:h-[366px]
+                            relative rounded-[15px] overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                         >
                             {/* Image */}
                             <div className="relative w-full h-full overflow-hidden">
@@ -86,15 +88,18 @@ const PortfolioSection = () => {
                                     src={item.image}
                                     alt={item.title}
                                     fill
-                                    className="object-cover w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-110"
+                                    className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                                     quality={100}
+                                    sizes="(max-width: 640px) 100vw,
+                 (max-width: 1024px) 50vw,
+                 25vw"
                                 />
                             </div>
 
                             {/* Overlay - appears on hover */}
                             <div className="absolute bottom-0 left-0 right-0 bg-white py-4 px-3 rounded-[10px] m-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                                <h3 className="text-[18px] host-grotesk host-grotesk-semibold">{item.title}</h3>
-                                <p className='text-[#505050] mt-2 text-[12px] host-grotesk host-grotesk-semibold leading-4'>{item.desc}</p>
+                                <h3 className="text-[16px] sm:text-[18px] host-grotesk host-grotesk-semibold">{item.title}</h3>
+                                <p className='text-[#505050] mt-2 text-[13px] sm:text-[12px] host-grotesk host-grotesk-semibold leading-4'>{item.desc}</p>
                                 <Link
                                     href={item.link}
                                     className="host-grotesk text-[16px] inline-flex items-center mt-4 px-4 py-2 bg-black text-white rounded-[10px] font-medium"

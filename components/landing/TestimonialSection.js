@@ -63,76 +63,129 @@ const TestimonialSection = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
+        arrows: false,
+        adaptiveHeight: true,
         responsive: [
-            { breakpoint: 1024, settings: { slidesToShow: 2 } },
-            { breakpoint: 768, settings: { slidesToShow: 1 } },
-            { breakpoint: 480, settings: { slidesToShow: 1 } },
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 768,
+                settings: { slidesToShow: 1 },
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1 },
+            },
         ],
     };
 
     return (
         <div className='max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px]'>
             {/* Section Heading */}
-            <div className='flex flex-col lg:flex-row items-center gap-10 mb-10'>
+            <div className='flex flex-col lg:flex-row items-start lg:items-center gap-3 md:gap-4 lg:gap-10 mb-10'>
                 <div className='flex-1'>
-                    <h2 className='host-grotesk text-[43px] host-grotesk-semibold'>Testimonials</h2>
+                    <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>Testimonials</h2>
                 </div>
                 <div className='flex-1'>
-                    <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-[18px] text-justify leading-5'>
+                    <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] text-justify leading-5'>
                         Our clients’ satisfaction is our priority. Hear what they have to say about their experience with Auzsheet Roofing and Guttering, and how we have transformed their homes with quality roofing, guttering, and fascia solutions that are built to last.
                     </p>
                 </div>
             </div>
 
             {/* Testimonial Content */}
-            <div className='flex gap-6 flex-wrap items-center justify-center md:flex-nowrap'>
+            {/* Testimonial Content */}
+            <div className="flex flex-col lg:flex-row gap-6 items-stretch justify-center">
+
                 {/* Left Column */}
-                <div className='flex-1 px-[43px] py-[52px] flex-shrink-0 rounded-[10px] bg-[#FAF3E9] items-center justify-center'>
-                    <div className='flex flex-col items-center justify-center'>
-                        <span className='host-grotesk host-grotesk-extra-bold text-[56px]'>4.9</span>
-                        <div className='flex gap-1'>
-                            <AiFillStar className="text-yellow-500 text-xl" />
-                            <AiFillStar className="text-yellow-500 text-xl" />
-                            <AiFillStar className="text-yellow-500 text-xl" />
-                            <AiFillStar className="text-yellow-500 text-xl" />
-                        </div>
+                <div
+                    className="
+      flex-1
+      px-6 py-8
+      sm:px-10 sm:py-12
+      rounded-[10px]
+      bg-[#FAF3E9]
+      flex flex-col
+      items-center
+      justify-center
+      text-center
+    "
+                >
+                    <span className="host-grotesk host-grotesk-extra-bold text-4xl sm:text-5xl lg:text-[56px]">
+                        4.9
+                    </span>
+
+                    <div className="flex gap-1 mt-1">
+                        <AiFillStar className="text-yellow-500 text-lg sm:text-xl" />
+                        <AiFillStar className="text-yellow-500 text-lg sm:text-xl" />
+                        <AiFillStar className="text-yellow-500 text-lg sm:text-xl" />
+                        <AiFillStar className="text-yellow-500 text-lg sm:text-xl" />
                     </div>
-                    <div className='mt-4 flex flex-col items-center justify-center'>
-                        <span className='host-grotesk text-[16px] text-[#9F9F9F] host-grotesk-semibold'>80+ Reviews</span>
-                        <p className='host-grotesk text-[#171716] host-grotesk-semibold mt-2 text-center'>
-                            Auzsheet Roofing completed a full reroof and fascia and gutter
-                            at my place as the old roof was rusted, leaked like a sieve
-                            and was a genuine eye sore!
-                        </p>
-                    </div>
+
+                    <span className="mt-4 host-grotesk text-sm sm:text-[16px] text-[#9F9F9F] host-grotesk-semibold">
+                        80+ Reviews
+                    </span>
+
+                    <p className="host-grotesk text-[#171716] host-grotesk-semibold mt-3 text-sm sm:text-base max-w-md">
+                        Auzsheet Roofing completed a full reroof and fascia and gutter at my place
+                        as the old roof was rusted, leaked like a sieve and was a genuine eye sore!
+                    </p>
                 </div>
 
                 {/* Right Column (Slider) */}
-                <div className='flex-2 w-full overflow-hidden'>
-                    <Slider {...settings} className="gap-6">
+                <div className="flex-[2] w-full min-w-0 overflow-hidden">
+                    <Slider {...settings}>
                         {testimonials.map((item, index) => (
-                            <div key={index} className='px-3'>
-                                <div className="h-[352px] w-[360px] p-6 bg-[#171716] rounded-[15px] border border-gray-200 mx-2 overflow-hidden">
-                                    <div className='w-[131px] h-[109px] rounded-[10px] overflow-hidden'>
-                                        <Image src={item.image} alt={item.name}
-                                            className="object-cover w-full h-full" />
+                            <div key={index} className="px-3">
+
+                                <div
+                                    className="
+              mx-auto
+              w-full max-w-[360px]
+              h-auto sm:h-[352px]
+              p-5 sm:p-6
+              bg-[#171716]
+              rounded-[15px]
+              border border-gray-200
+              flex flex-col
+              gap-4
+            "
+                                >
+                                    {/* Image */}
+                                    <div className="w-[110px] h-[90px] sm:w-[131px] sm:h-[109px] rounded-[10px] overflow-hidden">
+                                        <Image
+                                            src={item.image}
+                                            alt={item.name}
+                                            className="object-cover w-full h-full"
+                                        />
                                     </div>
+
+                                    {/* Content */}
                                     <div>
-                                        <div className="flex items-center gap-4 mb-4">
-                                            <div className='flex items-center w-full justify-between'>
-                                                <div>
-                                                    <h4 className="host-grotesk host-grotesk-semibold text-[22px] text-white">{item.name}</h4>
-                                                    <p className="host-grotesk host-grotesk-semibold text-[14px] text-[#9F9F9F]">{item.role}</p>
-                                                </div>
-                                                {/* Rating Icon */}
-                                                <div className='flex'>
-                                                    {renderStars(item.rating)}
-                                                </div>
+                                        <div className="flex items-center justify-between gap-3 mb-3">
+                                            <div>
+                                                <h4 className="host-grotesk host-grotesk-semibold text-lg sm:text-[22px] text-white">
+                                                    {item.name}
+                                                </h4>
+                                                <p className="host-grotesk host-grotesk-semibold text-xs sm:text-[14px] text-[#9F9F9F]">
+                                                    {item.role}
+                                                </p>
+                                            </div>
+
+                                            {/* Rating */}
+                                            <div className="flex">
+                                                {renderStars(item.rating)}
                                             </div>
                                         </div>
-                                        <p className="host-grotesk host-grotesk-semibold text-white text-[16px]">{item.message}</p>
+
+                                        <p className="host-grotesk host-grotesk-semibold text-white text-sm sm:text-[16px] leading-relaxed">
+                                            {item.message}
+                                        </p>
                                     </div>
                                 </div>
+
                             </div>
                         ))}
                     </Slider>

@@ -40,15 +40,15 @@ const HeroSection = () => {
                 </Slider>
 
                 {/* Static overlay text */}
-                <div className="absolute inset-0 bg-black/40 flex flex-col sm:flex-row items-center justify-center px-[50px]">
+                <div className="absolute inset-0 bg-black/40 flex flex-col sm:flex-row gap-[20px] items-center justify-center px-4 sm:px-10 md:px-[50px] py-6 sm:py-10 gap-6">
                     {/* Left */}
-                    <div className="flex-1 flex flex-col gap-[25px]">
+                    <div className="flex-1 flex flex-col gap-4 sm:gap-6">
                         <div className="flex flex-col gap-4">
-                            <h1 className="text-white text-[68px] host-grotesk host-grotesk-semibold tracking-wider leading-18">
+                            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[68px] host-grotesk host-grotesk-semibold tracking-wide leading-snug sm:leading-tight">
                                 Committed To Quality Roofing
                             </h1>
 
-                            <p className="text-white host-grotesk auz_white_three host-grotesk-bold text-[16px] leading-6">
+                            <p className="text-white host-grotesk auz_white_three host-grotesk-bold text-sm sm:text-base md:text-[16px] leading-relaxed sm:leading-6">
                                 We specialise in new roofs and re-roofs, using durable and stylish Colorbond® steel to protect and enhance your home for years to come.
                             </p>
                         </div>

@@ -22,15 +22,23 @@ const MARQUEE_ITEMS = [
 export default function CustomMarquee() {
     return (
         <div className="overflow-hidden bg-[#171716]">
-            <Marquee speed={60} pauseOnHover={false}
-                gradient={false}>
+            <Marquee speed={60} pauseOnHover={false} gradient={false}>
                 {MARQUEE_ITEMS.map((item, index) => (
                     <div
                         key={index}
 
                     >
                         <div className="flex items-center py-[15px]">
-                            <span className="host-grotesk text-stroke text-[46px] mr-[50px]">{item.text}</span>
+                            <span className="host-grotesk text-stroke 
+                            text-2xl
+                  sm:text-3xl
+                  md:text-4xl
+                  lg:text-[46px]
+                  mr-3
+                  sm:mr-10
+                  lg:mr-[50px]
+                  whitespace-nowrap
+                            mr-[50px]">{item.text}</span>
                             <Image
                                 src={item.image}
                                 alt={item.name}

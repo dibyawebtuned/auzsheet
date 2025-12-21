@@ -9,11 +9,27 @@ const CounterItem = ({ end, suffix = "", label }) => {
 
     return (
         <div ref={ref} className="flex flex-col items-center">
-            <span className="host-grotesk text-[50px] host-grotesk-regular text-[#171716]">
+            <span className="
+            host-grotesk 
+            text-3xl
+          sm:text-4xl
+          md:text-[42px]
+          lg:text-[50px]
+            host-grotesk-regular 
+            text-[#171716]
+            ">
                 {inView ? <CountUp end={end} duration={2} separator="," /> : 0}
                 {suffix}
             </span>
-            <span className="text-[#505050] host-grotesk host-grotesk-semibold text-[20px]">
+            <span className="text-[#505050] 
+            host-grotesk 
+            host-grotesk-semibold 
+            text-sm
+          sm:text-base
+          md:text-[18px]
+          lg:text-[20px]
+          leading-snug
+            ">
                 {label}
             </span>
         </div>
