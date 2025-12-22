@@ -35,7 +35,7 @@ export default function Navbar() {
                                     <div className="flex flex-col gap-3">
                                         <span className="text-gray-400 uppercase text-[10px] tracking-wider">Services</span>
                                         <div className="flex flex-col gap-3">
-                                            <Link href="/services/colorbond" className="flex flex-col">
+                                            <Link href="/services/fascia-gutter" className="flex flex-col">
                                                 <span className="text-white font-semibold text-[15px]">
                                                     Fascia cover and gutter
                                                 </span>
@@ -93,9 +93,7 @@ export default function Navbar() {
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
 
                         <Link href="/projects" className="font-semibold hover:font-extrabold transition-all duration-200">PROJECTS</Link>
@@ -160,7 +158,7 @@ export default function Navbar() {
                             <div className="pl-4 py-4 flex flex-col gap-3 text-[14px] bg-black rounded-[10px]">
 
                                 <Link
-                                    href="/services/colorbond"
+                                    href="/services/fascia"
                                     className="flex flex-col"
                                     onClick={() => {
                                         setMobileMenuOpen(false);

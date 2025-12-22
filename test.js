@@ -1,99 +1,89 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion from '@mui/material/Accordion';
-import MuiAccordionSummary from '@mui/material/AccordionSummary';
-import { accordionSummaryClasses } from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
+"use client"
+import React, { useEffect, useRef, useState } from "react";
+import {
+    BookOpen,
+    Target,
+    Compass,
+    HeartHandshake,
+} from "lucide-react";
 
-const Accordion = styled((props) => (
-    <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
-    border: `1px solid ${theme.palette.divider}`,
-    '&:not(:last-child)': {
-        borderBottom: 0,
-    },
-    '&::before': {
-        display: 'none',
-    },
-}));
+const sections = [
+    { id: "story", label: "Story", icon: BookOpen },
+    { id: "mission", label: "Mission", icon: Target },
+    { id: "vision", label: "Vision", icon: Compass },
+    { id: "values", label: "Values", icon: HeartHandshake },
+];
 
-const AccordionSummary = styled((props) => (
-    <MuiAccordionSummary
-        expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
-        {...props}
-    />
-))(({ theme }) => ({
-    backgroundColor: 'rgba(0, 0, 0, .03)',
-    flexDirection: 'row-reverse',
-    [`& .${accordionSummaryClasses.expandIconWrapper}.${accordionSummaryClasses.expanded}`]:
-    {
-        transform: 'rotate(90deg)',
-    },
-    [`& .${accordionSummaryClasses.content}`]: {
-        marginLeft: theme.spacing(1),
-    },
-    // Optional dark mode style
-    // Remove or modify as needed
-    // ...theme.applyStyles('dark', {
-    //   backgroundColor: 'rgba(255, 255, 255, .05)',
-    // }),
-}));
+export default function AboutSection() {
+    const [active, setActive] = useState("story");
+    const refs = useRef({});
 
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-    padding: theme.spacing(2),
-    borderTop: '1px solid rgba(0, 0, 0, .125)',
-}));
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActive(entry.target.id);
+                    }
+                });
+            },
+            {
+                threshold: 0.6,
+            }
+        );
 
-export default function CustomizedAccordions() {
-    const [expanded, setExpanded] = React.useState('panel1');
+        Object.values(refs.current).forEach((el) => el && observer.observe(el));
+        return () => observer.disconnect();
+    }, []);
 
-    const handleChange = (panel) => (event, newExpanded) => {
-        setExpanded(newExpanded ? panel : false);
+    const scrollTo = (id) => {
+        refs.current[id]?.scrollIntoView({ behavior: "smooth" });
     };
 
     return (
-        <div>
-            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                    <Typography component="span">Collapsible Group Item #1</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                        sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                        sit amet blandit leo lobortis eget.
-                    </Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-                    <Typography component="span">Collapsible Group Item #2</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                        sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                        sit amet blandit leo lobortis eget.
-                    </Typography>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-                    <Typography component="span">Collapsible Group Item #3</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                        malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-                        sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                        sit amet blandit leo lobortis eget.
-                    </Typography>
-                </AccordionDetails>
-            </Accordion>
-        </div>
+        <section className="max-w-360 mx-auto px-3 md:px-5 xl:px-25">
+            <div className="flex gap-8">
+
+                {/* LEFT – STICKY */}
+                <div className="flex-4">
+                    <div className="sticky top-24 border rounded-lg overflow-hidden">
+                        {sections.map(({ id, label, icon: Icon }) => (
+                            <button
+                                key={id}
+                                onClick={() => scrollTo(id)}
+                                className={`w-full flex items-center gap-3 px-4 py-4 text-left transition
+                  ${active === id
+                                        ? "bg-red-600 text-white"
+                                        : "hover:bg-gray-100"
+                                    }`}
+                            >
+                                <Icon className="w-5 h-5" />
+                                <span className="font-medium">{label}</span>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* RIGHT – CONTENT */}
+                <div className="flex-8 space-y-40">
+                    {sections.map(({ id, label }) => (
+                        <div
+                            key={id}
+                            id={id}
+                            ref={(el) => (refs.current[id] = el)}
+                            className="min-h-[80vh]"
+                        >
+                            <h2 className="text-3xl font-semibold mb-6">{label}</h2>
+                            <p className="text-gray-600 leading-relaxed max-w-3xl">
+                                This is the {label.toLowerCase()} section content.
+                                Add real copy here. As you scroll, the left navigation
+                                automatically updates its active state.
+                            </p>
+                        </div>
+                    ))}
+                </div>
+
+            </div>
+        </section>
     );
 }
