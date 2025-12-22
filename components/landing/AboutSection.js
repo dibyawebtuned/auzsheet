@@ -31,7 +31,7 @@ const AboutSection = () => {
     }, []);
     return (
         <div className='auz_bg'>
-            <div className='max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px] flex flex-col gap-[50px]'>
+            <div className='max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px] flex flex-col gap-[50px] overflow-hidden'>
                 <div className='flex flex-col lg:flex-row gap-[20px]'>
                     <div className='flex-1 flex flex-col gap-[15px] sm:gap-[40px]'>
                         <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold' data-aos="fade-up" data-aos-delay="500" >About Us</h2>

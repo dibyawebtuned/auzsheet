@@ -5,10 +5,12 @@ import { ArrowUpRight } from "lucide-react";
 import { IMAGES } from '@/constants/assets';
 import Link from 'next/link';
 
+import ButtonLink from '../ui/Button';
+
 const services = [
     {
-        title: "Colorbond® Fascia & Gutter",
-        description: "Auzsheet Roofing and Guttering provides expert services for both new and existing homes.",
+        title: "Fascia cover and gutter",
+        description: "Auzsheet supplies and installs all major brands of Colorbond® fascia and guttering for new builds",
         image: IMAGES.service_one,
         link: "/services/new-roofs",
     },
@@ -37,8 +39,15 @@ const ServiceSection = () => {
         <div className='max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px]'>
             {/* Section Heading */}
             <div className='flex flex-col lg:flex-row items-start lg:items-center gap-3 md:gap-4 lg:gap-10 mb-10'>
-                <div className='flex-1'>
+                <div className='flex-1 flex flex-col gap-[15px] sm:gap-[40px]'>
                     <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>Services</h2>
+                    <div data-aos="fade-up" >
+                        <ButtonLink
+                            href="/contact"
+                            label="View More"
+                            icon={ArrowUpRight}
+                        />
+                    </div>
                 </div>
                 <div className='flex-1'>
                     <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] text-justify leading-5'>

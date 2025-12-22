@@ -20,7 +20,7 @@ export default function Navbar() {
                     </Link>
 
                     {/* Desktop Menu */}
-                    <nav className="hidden lg:flex items-center gap-6.25 host-grotesk text-[14px] tracking-wider">
+                    <nav className="hidden lg:flex items-center gap-6.25 host-grotesk text-[16px] tracking-wider">
                         <Link href="/about" className="font-semibold hover:font-extrabold transition-all duration-200">ABOUT</Link>
 
                         {/* Desktop dropdown */}
@@ -37,7 +37,7 @@ export default function Navbar() {
                                         <div className="flex flex-col gap-3">
                                             <Link href="/services/colorbond" className="flex flex-col">
                                                 <span className="text-white font-semibold text-[15px]">
-                                                    Colorbond® Fascia & Gutter
+                                                    Fascia cover and gutter
                                                 </span>
                                                 <p className="text-[12px] text-[#898989]">Expert services for both new and existing</p>
                                             </Link>
@@ -82,9 +82,12 @@ export default function Navbar() {
                                             <div>
                                                 <Link
                                                     href="/services"
-                                                    className="inline-flex items-center justify-center bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition"
+                                                    className="group inline-flex items-center gap-2 bg-white text-black text-[14px] font-semibold px-3 py-2 rounded-[8px] transition"
                                                 >
-                                                    View All Services <ArrowUpRight className="ml-2 w-4 h-4" />
+                                                    View All Services
+                                                    <div className="bg-black text-[#F4F4F4] p-[10px] rounded-[4px]">
+                                                        <ArrowUpRight className="w-4 h-4" />
+                                                    </div>
                                                 </Link>
                                             </div>
                                         </div>
@@ -102,7 +105,7 @@ export default function Navbar() {
 
                     {/* Right side desktop */}
                     <div className="hidden md:flex items-center gap-6">
-                        <Link href="/contact" className="group flex items-center gap-2 font-semibold text-[14px] bg-white px-3 py-2 rounded-[8px] text-black hover:bg-gray-900 transition">
+                        <Link href="/contact" className="group flex items-center gap-2 font-semibold text-[16px] bg-white px-3 py-2 rounded-[8px] text-black hover:bg-gray-900 transition">
                             <span className="bg-[#F4F4F4] p-[10px] rounded-[4px]">
                                 <Phone size={16} />
                             </span>
@@ -114,7 +117,7 @@ export default function Navbar() {
 
                         <Link
                             href="/contact"
-                            className="group flex items-center gap-2 bg-black text-white text-[14px] font-semibold px-3 py-2 rounded-[8px] hover:bg-gray-900 transition"
+                            className="group flex items-center gap-2 bg-black text-white text-[16px] font-semibold px-3 py-2 rounded-[8px] hover:bg-gray-900 transition"
                         >
                             Get In Touch
                             <div className="bg-[#F4F4F4] text-black p-[10px] rounded-[4px]">
@@ -137,9 +140,9 @@ export default function Navbar() {
             {mobileMenuOpen && (
                 <div className="lg:hidden bg-white border-t border-gray-200">
                     <nav className="flex flex-col px-6 py-4 gap-2 font-medium">
-
                         <Link href="/about" onClick={() => setMobileMenuOpen(false)}>ABOUT</Link>
 
+                        {/* Mobile SERVICES dropdown */}
                         {/* Mobile SERVICES dropdown */}
                         <button
                             className="flex items-center justify-between py-2 w-full text-left"
@@ -148,17 +151,103 @@ export default function Navbar() {
                             <span>SERVICES</span>
                             <ChevronDown
                                 size={16}
-                                className={`transition-transform ${mobileServicesOpen ? "rotate-180" : "rotate-0"}`}
+                                className={`transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : "rotate-0"
+                                    }`}
                             />
                         </button>
 
                         {mobileServicesOpen && (
-                            <div className="flex flex-col ml-4 gap-1">
-                                <Link href="/services/roofing" onClick={() => setMobileMenuOpen(false)} className="py-1">Roofing</Link>
-                                <Link href="/services/guttering" onClick={() => setMobileMenuOpen(false)} className="py-1">Guttering</Link>
-                                <Link href="/services/maintenance" onClick={() => setMobileMenuOpen(false)} className="py-1">Maintenance</Link>
+                            <div className="pl-4 py-4 flex flex-col gap-3 text-[14px] bg-black rounded-[10px]">
+
+                                <Link
+                                    href="/services/colorbond"
+                                    className="flex flex-col"
+                                    onClick={() => {
+                                        setMobileMenuOpen(false);
+                                        setMobileServicesOpen(false);
+                                    }}
+                                >
+                                    <span className="font-semibold text-white">Fascia Cover & Gutter</span>
+                                    <span className="text-gray-300 text-[12px]">
+                                        Expert services for both new and existing
+                                    </span>
+                                </Link>
+
+                                <Link
+                                    href="/services/new-roofs"
+                                    className="flex flex-col"
+                                    onClick={() => {
+                                        setMobileMenuOpen(false);
+                                        setMobileServicesOpen(false);
+                                    }}
+                                >
+                                    <span className="font-semibold text-white">New Roofs & Re-Roofs</span>
+                                    <span className="text-gray-300 text-[12px]">
+                                        Expert services for both new and
+                                    </span>
+                                </Link>
+
+                                <Link
+                                    href="/services/skylight"
+                                    className="flex flex-col"
+                                    onClick={() => {
+                                        setMobileMenuOpen(false);
+                                        setMobileServicesOpen(false);
+                                    }}
+                                >
+                                    <span className="font-semibold text-white">Skylight Installation</span>
+                                    <span className="text-gray-300 text-[12px]">
+                                        Guttering specialises in professional
+                                    </span>
+                                </Link>
+
+                                <Link
+                                    href="/services/metal-cladding"
+                                    className="flex flex-col"
+                                    onClick={() => {
+                                        setMobileMenuOpen(false);
+                                        setMobileServicesOpen(false);
+                                    }}
+                                >
+                                    <span className="font-semibold text-white">Architectural Metal Cladding</span>
+                                    <span className="text-gray-300 text-[12px]">
+                                        Completely transform
+                                    </span>
+                                </Link>
+
+                                <Link
+                                    href="/services/edge-protection"
+                                    className="flex flex-col"
+                                    onClick={() => {
+                                        setMobileMenuOpen(false);
+                                        setMobileServicesOpen(false);
+                                    }}
+                                >
+                                    <span className="font-semibold text-white">Edge Protection Safety Rail</span>
+                                    <span className="text-gray-300 text-[12px]">
+                                        Skip the hassle of sourcing external edge
+                                    </span>
+                                </Link>
+
+                                {/* View all services */}
+                                <div>
+                                    <Link
+                                        href="/services"
+                                        className="mt-2 group inline-flex items-center gap-2 bg-white text-black text-[14px] font-semibold px-3 py-2 rounded-[8px] transition"
+                                        onClick={() => {
+                                            setMobileMenuOpen(false);
+                                            setMobileServicesOpen(false);
+                                        }}
+                                    >
+                                        View All Services
+                                        <div className="bg-black text-[#F4F4F4] p-[10px] rounded-[4px]">
+                                            <ArrowUpRight className="w-4 h-4" />
+                                        </div>
+                                    </Link>
+                                </div>
                             </div>
                         )}
+
 
                         <Link href="/projects" onClick={() => setMobileMenuOpen(false)}>PROJECTS</Link>
                         <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
@@ -166,19 +255,24 @@ export default function Navbar() {
 
                         {/* Mobile right section */}
                         <div className="flex flex-col mt-4 gap-2">
-                            <div className="flex items-center gap-2 font-semibold">
-                                <span className="p-2 bg-gray-100 rounded-full">s
+                            <div className="group inline-flex items-center gap-2 font-semibold text-[14px] bg-white px-3 py-2 rounded-[8px] text-black hover:bg-gray-900 transition">
+                                <span className="bg-[#F4F4F4] p-[10px] rounded-[4px]">
                                     <Phone size={16} />
                                 </span>
-                                <span>0466911940</span>
+                                <span className="group-hover:text-white transition-colors">0466911940</span>
                             </div>
 
-                            <Link
-                                href="/contact"
-                                className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-900 transition"
-                            >
-                                Get In Touch <ArrowUpRight size={16} />
-                            </Link>
+                            <div>
+                                <Link
+                                    href="/contact"
+                                    className="group inline-flex items-center gap-2 bg-black text-white text-[14px] font-semibold px-3 py-2 rounded-[8px] hover:bg-gray-900 transition"
+                                >
+                                    Get In Touch
+                                    <div className="bg-[#F4F4F4] text-black p-[10px] rounded-[4px]">
+                                        <ArrowUpRight size={16} className="arrow" />
+                                    </div>
+                                </Link>
+                            </div>
                         </div>
 
                     </nav>
