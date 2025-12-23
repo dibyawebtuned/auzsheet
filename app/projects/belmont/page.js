@@ -3,9 +3,11 @@ import BelmontComponent from './BelmontComponent'
 
 const page = () => {
     return (
-        <div>
-            <BelmontComponent />
-        </div>
+        <>
+            <div>
+                <BelmontComponent />
+            </div>
+        </>
     )
 }
 

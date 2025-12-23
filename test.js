@@ -1,89 +1,81 @@
 "use client"
-import React, { useEffect, useRef, useState } from "react";
-import {
-    BookOpen,
-    Target,
-    Compass,
-    HeartHandshake,
-} from "lucide-react";
+import React from "react"
+import Image from "next/image"
+import { IMAGES } from "@/constants/assets"
 
-const sections = [
-    { id: "story", label: "Story", icon: BookOpen },
-    { id: "mission", label: "Mission", icon: Target },
-    { id: "vision", label: "Vision", icon: Compass },
-    { id: "values", label: "Values", icon: HeartHandshake },
-];
-
-export default function AboutSection() {
-    const [active, setActive] = useState("story");
-    const refs = useRef({});
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActive(entry.target.id);
-                    }
-                });
-            },
-            {
-                threshold: 0.6,
-            }
-        );
-
-        Object.values(refs.current).forEach((el) => el && observer.observe(el));
-        return () => observer.disconnect();
-    }, []);
-
-    const scrollTo = (id) => {
-        refs.current[id]?.scrollIntoView({ behavior: "smooth" });
-    };
-
+const BelomntComponent = () => {
     return (
-        <section className="max-w-360 mx-auto px-3 md:px-5 xl:px-25">
-            <div className="flex gap-8">
+        <div className="max-w-[1440px] mx-3 md:mx-5 xl:mx-auto mt-[100px]
+                    flex justify-center auz_bg relative rounded-[30px] overflow-hidden">
 
-                {/* LEFT – STICKY */}
-                <div className="flex-4">
-                    <div className="sticky top-24 border rounded-lg overflow-hidden">
-                        {sections.map(({ id, label, icon: Icon }) => (
-                            <button
-                                key={id}
-                                onClick={() => scrollTo(id)}
-                                className={`w-full flex items-center gap-3 px-4 py-4 text-left transition
-                  ${active === id
-                                        ? "bg-red-600 text-white"
-                                        : "hover:bg-gray-100"
-                                    }`}
-                            >
-                                <Icon className="w-5 h-5" />
-                                <span className="font-medium">{label}</span>
-                            </button>
-                        ))}
+            <div className="px-6 sm:px-8 py-12 sm:py-16 flex flex-col gap-[30px] w-full">
+
+                {/* Header */}
+                <div className="flex flex-col lg:flex-row items-start lg:items-center gap-[30px]">
+                    <div className="flex-1">
+                        <h2 className="host-grotesk text-black text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold">
+                            Projects
+                        </h2>
+                    </div>
+
+                    <div className="flex-1">
+                        <span className="auz_text_gray host-grotesk host-grotesk-semibold
+                             text-base sm:text-[17px] lg:text-[18px]
+                             leading-5 block max-w-[420px]">
+                            Our most recent Auzsheet Projects have assisted in transforming exterior
+                            facades of sites all around Newcastle, the Hunter and Central Coast regions!
+                        </span>
                     </div>
                 </div>
 
-                {/* RIGHT – CONTENT */}
-                <div className="flex-8 space-y-40">
-                    {sections.map(({ id, label }) => (
-                        <div
-                            key={id}
-                            id={id}
-                            ref={(el) => (refs.current[id] = el)}
-                            className="min-h-[80vh]"
-                        >
-                            <h2 className="text-3xl font-semibold mb-6">{label}</h2>
-                            <p className="text-gray-600 leading-relaxed max-w-3xl">
-                                This is the {label.toLowerCase()} section content.
-                                Add real copy here. As you scroll, the left navigation
-                                automatically updates its active state.
-                            </p>
-                        </div>
-                    ))}
-                </div>
+                {/* Image + Overlay */}
+                <div className="relative w-full">
 
+                    {/* Image */}
+                    <div className="relative h-[280px] sm:h-[360px] lg:h-[450px]
+                          overflow-hidden rounded-[20px]">
+                        <Image
+                            src={IMAGES.service_one}
+                            alt="Service image"
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
+
+                    {/* Overlay Card */}
+                    <div
+                        className="
+                        absolute
+                        bottom-4 left-1/2 -translate-x-1/2
+                        lg:top-[-20px] lg:right-[40px] lg:left-auto lg:translate-x-0
+                        bg-black text-white
+                        w-[90%] sm:w-[70%] lg:w-[40%]
+                        max-w-[800px]
+                        rounded-[12px]
+                        px-5 py-6
+                        flex flex-col sm:flex-row gap-4
+                        "
+                    >
+                        {/* Left column */}
+                        <div className="flex flex-col gap-2 font-semibold text-[16px] sm:text-[18px] host-grotesk">
+                            <span>Manager:</span>
+                            <span>Location:</span>
+                            <span>Project year:</span>
+                        </div>
+
+                        {/* Right column */}
+                        <div className="flex flex-col gap-2 text-[16px] sm:text-[18px] host-grotesk">
+                            <span>Bryan Knight</span>
+                            <span>Mexico</span>
+                            <span>2024</span>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </section>
-    );
+        </div>
+    )
 }
+
+export default BelomntComponent

@@ -57,6 +57,7 @@ const portfolioItems = [
     },
 ];
 
+
 const PortfolioSection = () => {
     return (
         <div className='auz_bg'>
