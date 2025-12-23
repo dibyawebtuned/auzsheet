@@ -6,6 +6,7 @@ import ContactSection from '@/components/landing/ContactSection'
 const ContactComponent = () => {
   return (
     <div>
+      {/*  */}
       <div className='max-w-360 mx-auto mx-3 md:mx-5 lg:mx-5 xl:mx-25 mt-[100px] flex justify-center auz_bg relative rounded-[30px] overflow-hidden'>
         <div className='px-8 py-16 flex flex-col gap-[30px]'>
           <div className='flex items-center gap-[30px]'>
@@ -73,7 +74,7 @@ const ContactComponent = () => {
           </div>
 
           {/* Map */}
-          <div className="w-full h-96 rounded-[20px] overflow-hidden">
+          <div className="w-full h-96 rounded-4xl overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0862765739286!2d144.96305831550448!3d-37.81361197975173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577b6d603a2f0f1!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1692958329111!5m2!1sen!2sau"
               width="100%"
@@ -84,10 +85,10 @@ const ContactComponent = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-
         </div>
       </div>
 
+      {/* Contact Section */}
       <ContactSection />
     </div>
   )
