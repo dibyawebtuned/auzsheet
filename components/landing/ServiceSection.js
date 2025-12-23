@@ -43,7 +43,7 @@ const ServiceSection = () => {
                     <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>Services</h2>
                     <div data-aos="fade-up" >
                         <ButtonLink
-                            href="/contact"
+                            href="/services"
                             label="View More"
                             icon={ArrowUpRight}
                         />

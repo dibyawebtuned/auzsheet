@@ -13,7 +13,7 @@ const AboutHeroComponent = () => {
                     <div className='flex-1'>
                         <div className='flex flex-col gap-[10px]'>
                             <h2 className='text-white host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold' data-aos="fade-up" data-aos-delay="500" >About Us</h2>
-                            <span className='auz_white_one host-grotesk leading-5 text-justify'>
+                            <span className='auz_white_one host-grotesk host-grotesk-semibold leading-5 text-justify'>
                                 At Auzsheet Roofing and Guttering, we pride ourselves on being a local,
                                 family-owned business dedicated to delivering quality roofing solutions
                                 across residential and commercial projects.
@@ -33,8 +33,8 @@ const AboutHeroComponent = () => {
                         </div>
                     </div>
 
-                    <div className='flex-1 auz_white_one host-grotesk'>
-                        <p className='leading-6 mb-2 text-justify'>
+                    <div className='flex-1 auz_white_one host-grotesk host-grotesk-semibold'>
+                        <p className='leading-5  mb-2 text-justify'>
                             We specialise in new roofs and re-roofs, using durable and stylish Colorbond® steel to
                             protect and enhance your home for years to come. Our services extend to fascia and
                             gutter installations, offering both new systems and upgrades to replace leaking or
@@ -42,8 +42,10 @@ const AboutHeroComponent = () => {
                             provide additional features including skylight installations - bringing natural light
                             into dark spaces - and Colorbond® Architectural Wall Cladding, which modernises exteriors
                             with striking finishes and long-lasting durability.
-                        </p>
-                        <p className='leading-6 text-justify'>
+
+                            <br />
+                            <br />
+
                             At Auzsheet, we understand that your home is one of your most important investments.
                             That’s why we combine premium materials, expert workmanship, and a personalised
                             approach to deliver roofing solutions that not only look great but stand the test

@@ -1,12 +1,12 @@
 "use client"
 import React from 'react'
 
-const FaciagutterComponent = () => {
+const BelomntComponent = () => {
   return (
     <div>
-
+      
     </div>
   )
 }
 
-export default FaciagutterComponent
+export default BelomntComponent

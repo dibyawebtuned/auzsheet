@@ -11,13 +11,13 @@ const portfolioItems = [
         title: "Valentine Project",
         desc: "Our Valentine Project consisted of a full exterior refresh for the client.",
         image: IMAGES.service_one,
-        link: "/portfolio/project-one"
+        link: "/projects/belmont"
     },
     {
         title: "Belmont North Project",
         desc: "Utilising range of architectural cladding, Auzsheet Roofing and Guttering can completely transform",
         image: IMAGES.service_two,
-        link: "/portfolio/project-two"
+        link: "/projects/belmont"
     },
     {
         title: "Windale Project",
