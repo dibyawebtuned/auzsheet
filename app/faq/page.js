@@ -4,7 +4,7 @@ import FaqComponent from './FaqComponent'
 const page = () => {
   return (
     <div>
-      <FaqComponent/>
+      <FaqComponent />
     </div>
   )
 }

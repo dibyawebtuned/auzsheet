@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const ContactSection = () => {
     return (
-        <div className="max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px]">
+        <div className="max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 pt-[80px] pb-[40px]">
             {/* Section Heading */}
             <div className='flex flex-col lg:flex-row items-start lg:items-center gap-3 md:gap-4 lg:gap-10 mb-10'>
                 <div className='flex-1'>
