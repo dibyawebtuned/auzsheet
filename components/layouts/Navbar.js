@@ -103,7 +103,7 @@ export default function Navbar() {
 
                     {/* Right side desktop */}
                     <div className="hidden md:flex items-center gap-6">
-                        <Link href="/contact" className="group flex items-center gap-2 font-semibold text-[16px] bg-white px-3 py-2 rounded-[8px] text-black hover:bg-gray-900 transition">
+                        <Link href="tel:0466911940" className="group flex items-center gap-2 font-semibold text-[16px] bg-white px-3 py-2 rounded-[8px] text-black hover:bg-gray-900 transition">
                             <span className="bg-[#F4F4F4] p-[10px] rounded-[4px]">
                                 <Phone size={16} />
                             </span>

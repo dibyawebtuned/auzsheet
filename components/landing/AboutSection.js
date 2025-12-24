@@ -37,7 +37,7 @@ const AboutSection = () => {
                         <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold' data-aos="fade-up" data-aos-delay="500" >About Us</h2>
                         <div data-aos="fade-up" >
                             <ButtonLink
-                                href="/contact"
+                                href="/about"
                                 label="Know More"
                                 icon={ArrowUpRight}
                             />

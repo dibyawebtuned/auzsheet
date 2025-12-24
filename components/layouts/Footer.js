@@ -16,9 +16,9 @@ const Footer = () => {
                     <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-between sm:gap-8">
                         {/* Logo & About */}
                         <div className="flex-2">
-                            <div className="w-[195px] h-[97px]">
+                            <Link href="/constants" className="w-[195px] h-[97px]">
                                 <Image src={Footer_Logo} alt="Logo" />
-                            </div>
+                            </Link>
                             <p className="mt-4 host-grotesk auz_white_one host-grotesk-medium text-[15px] pr-16">
                                 At Auzsheet Roofing and Guttering, we pride ourselves on being a local, family-owned business dedicated to delivering quality roofing solutions across residential and commercial projects.
                             </p>
@@ -42,10 +42,10 @@ const Footer = () => {
                                 Company
                             </h3>
                             <ul className="mt-6 space-y-2 host-grotesk host-grotesk-medium">
-                                <li><a href="#" className="auz_white_three transition">About us</a></li>
-                                <li><a href="#" className="auz_white_three transition">Portfolio</a></li>
-                                <li><a href="#" className="auz_white_three transition">FAQs</a></li>
-                                <li><a href="#" className="auz_white_three transition">Contact</a></li>
+                                <li><Link href="/about" className="auz_white_three transition">About us</Link></li>
+                                <li><Link href="/projects" className="auz_white_three transition">Portfolio</Link></li>
+                                <li><Link href="/faq" className="auz_white_three transition">FAQs</Link></li>
+                                <li><Link href="/contact" className="auz_white_three transition">Contact</Link></li>
                             </ul>
                         </div>
 
@@ -55,10 +55,10 @@ const Footer = () => {
                                 Services
                             </h3>
                             <ul className="mt-6 space-y-2 host-grotesk host-grotesk-medium">
-                                <li><Link href="#" className="auz_white_three transition">Colorbond® Fascia</Link></li>
-                                <li><Link href="#" className="auz_white_three transition">New Roofs</Link></li>
-                                <li><Link href="#" className="auz_white_three transition">Skylight Installation</Link></li>
-                                <li><Link href="#" className="auz_white_three transition">Architectual Metal</Link></li>
+                                <li><Link href="/fascia-gutter" className="auz_white_three transition">Colorbond® Fascia</Link></li>
+                                <li><Link href="/new-roofs" className="auz_white_three transition">New Roofs</Link></li>
+                                <li><Link href="/skylight" className="auz_white_three transition">Skylight Installation</Link></li>
+                                <li><Link href="/metal-cladding" className="auz_white_three transition">Architectual Metal</Link></li>
                             </ul>
                         </div>
 
@@ -68,8 +68,8 @@ const Footer = () => {
                                 Contact
                             </h3>
                             <ul className="mt-6 space-y-2 host-grotesk host-grotesk-medium">
-                                <li><Link href="#" className="auz_white_three transition">0466 911 940</Link></li>
-                                <li><Link href="#" className="auz_white_three transition">auzsheetroofing@outlook.com</Link></li>
+                                <li><Link href="tel:0466911940" className="auz_white_three transition">0466 911 940</Link></li>
+                                <li><Link href="mailto:auzsheetroofing@outlook.com" className="auz_white_three transition">auzsheetroofing@outlook.com</Link></li>
                                 <li><Link href="#" className="auz_white_three transition">Australia</Link></li>
                             </ul>
                         </div>
@@ -89,22 +89,24 @@ const Footer = () => {
                             <div className="border-t lg:border-t-0 lg:border-l border-[#626262] my-4 lg:my-0 mx-0 lg:mx-4"></div>
 
                             {/* Form */}
-                            <div className="flex-1 flex justify-center lg:justify-start py-4 lg:py-10">
-                                <form className="flex w-full max-w-md border border-[#DEDEDE] rounded-[40px]">
-                                    <input
-                                        type="email"
-                                        placeholder="Enter Your Email"
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        required
-                                        className="bg-[#DEDEDE] flex-1 rounded-l-full py-3 px-4 text-gray-700 placeholder-[#9B9B9B] focus:outline-none text-[14px] host-grotesk host-grotesk-medium"
-                                    />
-                                    <button
-                                        type="submit"
-                                        className="bg-[#171716] text-white rounded-r-full px-6 py-3 hover:bg-gray-800 transition-colors text-[14px] host-grotesk host-grotesk-medium"
-                                    >
-                                        Sign Up
-                                    </button>
-                                </form>
+                            <div className="flex-1 inline-flex items-center w-full">
+                                <div className="flex lg:justify-start py-4 lg:py-10 w-full">
+                                    <form className="flex w-full max-w-md border border-[#DEDEDE] rounded-[40px]">
+                                        <input
+                                            type="email"
+                                            placeholder="Enter Your Email"
+                                            onChange={(e) => setEmail(e.target.value)}
+                                            required
+                                            className="bg-[#DEDEDE] flex-1 rounded-l-full py-3 px-4 text-gray-700 placeholder-[#9B9B9B] focus:outline-none text-[14px] host-grotesk host-grotesk-medium"
+                                        />
+                                        <button
+                                            type="submit"
+                                            className="bg-[#171716] text-white rounded-r-full px-6 py-3 hover:bg-gray-800 transition-colors text-[14px] host-grotesk host-grotesk-medium"
+                                        >
+                                            Sign Up
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

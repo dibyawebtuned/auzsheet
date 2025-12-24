@@ -55,7 +55,7 @@ const HeroSection = () => {
 
                         <div>
                             <ButtonLink
-                                href="/contact"
+                                href="tel:0466911940"
                                 label="0466911940"
                                 icon={Phone}
                                 bgColor="bg-[#F3F3F3]"
