@@ -4,7 +4,7 @@ import FaciagutterComponent from './FaciagutterComponent'
 const page = () => {
   return (
     <div>
-      <FaciagutterComponent/>
+      <FaciagutterComponent />
     </div>
   )
 }

@@ -17,11 +17,11 @@ const BelomntComponent = () => {
     IMAGES.service_three,
   ]
   return (
-    <>
-      <div className='max-w-360 mx-auto mx-3 md:mx-5 lg:mx-5 xl:mx-25 mt-[100px] flex justify-center auz_bg relative rounded-[30px] overflow-hidden'>
-        <div className='px-8 py-16 flex flex-col gap-[30px]'>
+    <div className='px-3 md:px-5 lg:px-5'>
+      <div className='max-w-360 mx-auto md:mx-5 lg:mx-5 xl:mx-25 mt-[100px] flex justify-center  relative rounded-[30px] overflow-hidden'>
+        <div className='px-4 md:px-8 py-10 md:py-16 flex flex-col gap-[15px] sm:gap-[30px] auz_bg'>
           {/*  */}
-          <div className='flex flex-col lg:flex-row items-start lg:items-center gap-[10px] md:gap-[30px]'>
+          <div className='flex flex-col lg:flex-row items-start lg:items-center gap-[10px] md:gap-[30px] '>
             <div className='flex-1'>
               <h2 className='host-grotesk text-black text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>
                 Projects
@@ -39,7 +39,7 @@ const BelomntComponent = () => {
           {/*  */}
           <div className="relative w-full">
             {/* Image */}
-            <div className="relative h-[450px] overflow-hidden rounded-[20px]">
+            <div className="relative h-64 sm:h-80 md:h-96 lg:h-[450px] overflow-hidden rounded-[20px]">
               <Image
                 src={IMAGES.service_one}
                 alt="Service image"
@@ -47,21 +47,23 @@ const BelomntComponent = () => {
                 className="object-cover"
                 priority
               />
+              <div className="absolute inset-0 bg-black/20" />
             </div>
 
             {/* Overlay Card */}
-            <div className="
-            absolute
-            bottom-80 left-52 -translate-x-1/2
-            lg:top-[-20px] lg:right-[40px] lg:left-auto lg:translate-x-0
-             bg-black text-white
-            w-[90%] sm:w-[70%] lg:w-[40%]
-            max-w-[800px]
-            rounded-[12px]
-            px-5 py-6
-            flex flex-row gap-4
-            ">
-
+            <div
+              className="
+              absolute
+              top-[20px] sm:top-[60px] lg:top-[60px]
+              left-1/2 sm:left-3/4 transform -translate-x-1/2
+            bg-black text-white
+              w-[90%] sm:w-[70%] lg:w-[40%]
+              max-w-[800px]
+              rounded-[12px]
+              px-4 sm:px-5 py-4 sm:py-6
+              flex flex-row gap-4
+              "
+            >
               {/* Left column */}
               <div className="flex flex-col gap-2 font-semibold text-[16px] sm:text-[18px] host-grotesk">
                 <span>Manager:</span>
@@ -75,10 +77,9 @@ const BelomntComponent = () => {
                 <span>Mexico</span>
                 <span>2024</span>
               </div>
-
             </div>
-
           </div>
+
 
           {/* Light Box Images STARTS */}
           <div>
@@ -179,12 +180,11 @@ const BelomntComponent = () => {
             </div>
           </div>
           {/* Project Content ENDS */}
-
         </div>
       </div>
 
       <ContactSection />
-    </>
+    </div>
   )
 }
 

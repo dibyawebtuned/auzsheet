@@ -92,59 +92,46 @@ export default function MissionVisionComponent() {
     ];
 
     return (
-        <section className="max-w-360 mx-auto px-3 md:px-5 xl:px-25 mt-[80px] mb-[80px]">
-            <div className="flex gap-10">
+        <section className="max-w-360 mx-auto px-3 md:px-5 xl:px-25 mt-[60px] sm:mt-[80px] mb-[60px] sm:mb-[80px]">
+            <div className="flex flex-col sm:flex-row gap-10">
                 {/* ================= LEFT STICKY GRID ================= */}
                 <div className="flex-4">
-                    <div className="sticky top-24 grid grid-cols-2 gap-[3px] bg-white">
-                        <button
-                            onClick={() => scrollTo("story")}
-                            className={`flex items-center justify-center gap-3 py-7 rounded-[5px] font-semibold uppercase transition ${active === "story"
-                                ? "bg-black text-white"
-                                : "bg-gray-100 hover:bg-gray-200"
-                                }`}
-                        >
-                            <BookOpen className="w-6 h-6" />
-                            <span className="host-grotesk host-grotesk-bold">Story</span>
-                        </button>
-                        <button
-                            onClick={() => scrollTo("mission")}
-                            className={`flex items-center justify-center gap-3 py-7 rounded-[5px] font-semibold uppercase transition ${active === "mission"
-                                ? "bg-black text-white"
-                                : "bg-gray-100 hover:bg-gray-200"
-                                }`}
-                        >
-                            <Target className="w-6 h-6" />
-                            <span className="host-grotesk host-grotesk-bold">Mission</span>
-                        </button>
-                        <button
-                            onClick={() => scrollTo("vision")}
-                            className={`flex items-center justify-center gap-3 py-7 rounded-[5px] font-semibold uppercase transition ${active === "vision"
-                                ? "bg-black text-white"
-                                : "bg-gray-100 hover:bg-gray-200"
-                                }`}
-                        >
-                            <Compass className="w-6 h-6" />
-                            <span className="host-grotesk host-grotesk-bold">Vision</span>
-                        </button>
-                        <button
-                            onClick={() => scrollTo("values")}
-                            className={`flex items-center justify-center gap-3 py-7 rounded-[5px] font-semibold uppercase transition ${active === "values"
-                                ? "bg-black text-white"
-                                : "bg-gray-100 hover:bg-gray-200"
-                                }`}
-                        >
-                            <BadgeCheck className="w-6 h-6" />
-                            <span className="host-grotesk host-grotesk-bold">Values</span>
-                        </button>
-                    </div>
+                    <div className="sm:sticky sm:top-24 flex sm:grid sm:grid-cols-2 gap-[3px] overflow-x-auto sm:overflow-visible bg-white -mx-3 sm:mx-0 px-3 sm:px-0">
+                        {[
+                            { id: "story", label: "Story", icon: BookOpen },
+                            { id: "mission", label: "Mission", icon: Target },
+                            { id: "vision", label: "Vision", icon: Compass },
+                            { id: "values", label: "Values", icon: BadgeCheck },
+                        ].map(({ id, label, icon: Icon }) => (
+                            <button
+                                key={id}
+                                onClick={() => scrollTo(id)}
+                                className={`
+                                      flex items-center justify-center gap-2
+                                      py-4 sm:py-7
+                                      px-4
+                                      rounded-[5px]
+                                      text-sm sm:text-base
+                                      font-semibold uppercase whitespace-nowrap
+                                      transition
+                                      ${active === id
+                                        ? "bg-black text-white"
+                                        : "bg-gray-100 hover:bg-gray-200"
+                                    }
+                                    `}
+                            >
+                                <Icon className="w-5 h-5" />
+                                {label}
+                            </button>
+                        ))}
+                    </div>x
                 </div>
 
                 {/* ================= RIGHT CONTENT ================= */}
                 <div className="flex-8 space-y-20">
                     {/* ================= STORY ================= */}
                     <div id="story" ref={(el) => (refs.current["story"] = el)}>
-                        <div className="auz_text_gray host-grotesk host-grotesk-semibold text-[18px] leading-6 text-justify space-y-2">
+                        <div className="auz_text_gray host-grotesk host-grotesk-semibold text-base sm:text-[17px] lg:text-[18px] leading-6 sm:text-justify space-y-2">
                             <p>
                                 At Auzsheet Roofing and Guttering, we pride ourselves on being a local,
                                 family-owned business dedicated to delivering quality roofing solutions
@@ -165,14 +152,14 @@ export default function MissionVisionComponent() {
                         </div>
 
                         {/* ================= JOURNEY / TIMELINE ================= */}
-                        <div className="mt-8 border-l-2 border-gray-300 pl-6 flex flex-col gap-12">
+                        <div className="mt-8 border-l-2 border-gray-300 pl-3 sm:pl-6 flex flex-col gap-8 sm:gap-12">
                             {journeyData.map(({ year, title, description }) => (
                                 <div key={year} className="relative">
-                                    <div className="absolute -left-3 top-2 w-4 h-4 bg-black rounded-full"></div>
+                                    <div className="absolute -left-[9px] sm:-left-3 top-2 w-3 h-3 sm:w-4 sm:h-4 bg-black rounded-full"></div>
                                     <div className="host-grotesk">
-                                        <span className="text-2xl font-bold block mb-1 ml-4">{year}</span>
-                                        <h4 className="text-xl font-semibold mb-1">{title}</h4>
-                                        <p className="auz_text_gray host-grotesk-medium leading-5">{description}</p>
+                                        <span className="text-lg sm:text-2xl font-bold block mb-1 ml-3 sm:ml-4">{year}</span>
+                                        <h4 className="text-md sm:text-xl font-semibold mb-1">{title}</h4>
+                                        <p className="auz_text_gray host-grotesk-medium text-sm sm:text-base leading-5">{description}</p>
                                     </div>
                                 </div>
                             ))}
@@ -182,7 +169,7 @@ export default function MissionVisionComponent() {
                         {ABOUT.map((item, index) => (
                             <div
                                 key={index}
-                                className="mt-8 w-full h-80 relative rounded-[10px] overflow-hidden"
+                                className="mt-8 w-full h-56 sm:h-72 lg:h-80 relative rounded-[10px] overflow-hidden"
                             >
                                 <Image src={item.image} alt="About Section" fill className="object-cover" />
                             </div>
@@ -190,20 +177,21 @@ export default function MissionVisionComponent() {
                     </div>
 
                     {/* ================= MISSION ================= */}
-                    <div
-                        id="mission"
-                        ref={(el) => (refs.current["mission"] = el)}
-                        className="relative bg-cover bg-center bg-no-repeat h-auto py-20 rounded-[20px] overflow-hidden"
+                    <div id="mission" ref={(el) => (refs.current["mission"] = el)}
+                        className="relative bg-cover bg-center bg-no-repeat h-auto py-14 sm:py-20 rounded-[20px] overflow-hidden"
                         style={{ backgroundImage: "url('/assets/img/about.png')" }}
                     >
                         <div className="absolute inset-0 bg-black/40"></div>
-                        <div className="relative z-10 max-w-3xl mx-auto text-white px-6 space-y-6">
+                        {/* Content */}
+                        <div className="relative z-10 max-w-3xl mx-auto text-white px-3 sm:px-6 space-y-6">
+                            {/* Heading */}
                             <div className="flex items-center gap-3">
                                 <Target className="w-8 h-8 text-white" />
-                                <h2 className="host-grotesk host-grotesk-bold text-[30px] uppercase tracking-wide">Mission</h2>
+                                <h2 className="host-grotesk host-grotesk-bold text-[26px] sm:text-[30px] uppercase tracking-wide">Mission</h2>
                             </div>
-                            <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl p-8 shadow-lg">
-                                <p className="text-[18px] host-grotesk host-grotesk-medium leading-6">
+                            {/* Mission Text */}
+                            <div className="bg-white/30 backdrop-blur-md border border-white/20 rounded-xl p-4 sm:p-8 shadow-lg">
+                                <p className="text-base sm:text-[17px] lg:text-[18px] host-grotesk host-grotesk-medium leading-6">
                                     To make your project seamless, we can also additionally supply and install Edge
                                     Protection Safety Rail directly, saving you the hassle of coordinating multiple
                                     contractors and ensuring safety is always a top priority.
@@ -214,15 +202,22 @@ export default function MissionVisionComponent() {
 
                     {/* ================= VISION ================= */}
                     <div id="vision" ref={(el) => (refs.current["vision"] = el)}>
-                        <div className="mb-6 flex items-center gap-3">
-                            <div className="px-3 py-3 bg-black rounded-[10px]">
-                                <Eye className="w-8 h-8 text-white" />
+                        <div className="mb-4 sm:mb-6 flex items-center gap-3">
+                            <div className="p-2 sm:p-3 bg-black rounded-[10px]">
+                                <Eye className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                             </div>
-                            <h2 className="host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold">Vision</h2>
+                            <h2 className="
+                            host-grotesk 
+                            text-3xl sm:text-4xl lg:text-[43px] 
+                            host-grotesk-semibold
+                            ">
+                                Vision
+                            </h2>
                         </div>
+
                         <div className="max-w-2xl">
-                            <div className="bg-[#faf3e9] backdrop-blur-md border border-white/30 rounded-xl p-8">
-                                <p className="host-grotesk auz_text_gray leading-6 text-[18px] host-grotesk-semibold">
+                            <div className="bg-[#faf3e9] backdrop-blur-md border border-white/30 rounded-xl p-4 sm:p-8">
+                                <p className="host-grotesk auz_text_gray leading-6 text-base sm:text-[17px] lg:text-[18px] host-grotesk-semibold">
                                     To be the leading provider of durable, innovative, and aesthetically exceptional
                                     roofing solutions across residential and commercial projects, setting the benchmark
                                     for quality, reliability, and customer satisfaction in every roof we deliver.
@@ -234,28 +229,36 @@ export default function MissionVisionComponent() {
                     {/* ================= VALUES ================= */}
                     <div id="values" ref={(el) => (refs.current["values"] = el)}>
                         <div className="mb-6 flex items-center gap-3">
-                            <div className="px-3 py-3 bg-black rounded-[10px]">
-                                <BadgeCheck className="w-8 h-8 text-white" />
+                            <div className="p-2 sm:p-3 bg-black rounded-[10px]">
+                                <BadgeCheck className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                             </div>
-                            <h2 className="host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold">Values</h2>
+                            <h2
+                                className="
+                            host-grotesk 
+                            text-3xl sm:text-4xl lg:text-[43px] 
+                            host-grotesk-semibold
+                            ">
+                                Values
+                            </h2>
                         </div>
-                        <div className="flex flex-col gap-4 max-w-3xl">
+                        {/* Content */}
+                        <div className="flex flex-col gap-3 sm:gap-4 max-w-3xl">
                             {valuesData.map((item, index) => (
                                 <div key={index} className="border border-gray-300 rounded-xl overflow-hidden">
                                     <button
                                         onClick={() => toggleValue(index)}
-                                        className={`w-full flex justify-between items-center px-6 py-4 transition cursor-pointer font-semibold host-grotesk ${activeValue === index
+                                        className={`w-full flex justify-between items-center px-4 sm:px-6 py-3 sm:py-4 transition cursor-pointer font-semibold host-grotesk ${activeValue === index
                                             ? "bg-black text-white"
                                             : "bg-gray-100 hover:bg-gray-200 text-gray-900"
                                             }`}
                                     >
-                                        <div className="flex items-center gap-2">
+                                        <div className="flex items-center gap-2 sm:gap-3">
                                             {/* Dynamic Icon */}
                                             {React.createElement(item.icon, {
-                                                className: `w-5 h-5 transition-colors duration-300 ${activeValue === index ? "text-white" : "text-gray-600"
+                                                className: `w-4 h-4 sm:w-5 sm:h-5 transition-colors duration-300 ${activeValue === index ? "text-white" : "text-gray-600"
                                                     }`,
                                             })}
-                                            <span className="text-[18px]">{item.title}</span>
+                                            <span className="text-[15px] sm:text-[18px]">{item.title}</span>
                                         </div>
                                         <span
                                             className={`text-xl transition-transform duration-300 ${activeValue === index ? "rotate-45" : "rotate-0"
@@ -266,10 +269,10 @@ export default function MissionVisionComponent() {
                                     </button>
 
                                     <div
-                                        className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${activeValue === index ? "max-h-96 opacity-100 py-4" : "max-h-0 opacity-0 py-0"
+                                        className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${activeValue === index ? "max-h-96 opacity-100 py-3 sm:py-4" : "max-h-0 opacity-0 py-0"
                                             }`}
                                     >
-                                        <p className="host-grotesk host-grotesk-semibold auz_text_gray">{item.description}</p>
+                                        <p className="host-grotesk host-grotesk-semibold auz_text_gray text-sm sm:text-base leading-[1.5] sm:leading-6">{item.description}</p>
                                     </div>
                                 </div>
                             ))}
