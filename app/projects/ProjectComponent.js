@@ -38,7 +38,7 @@ const portfolioItems = [
     link: "/projects/valentine"
   },
   {
-    title: "Valentine Project",
+    title: "Belmont North Project",
     desc: "Our Valentine Project consisted of a full exterior refresh for the client.",
     image: IMAGES.service_one,
     link: "/projects/belmont"
