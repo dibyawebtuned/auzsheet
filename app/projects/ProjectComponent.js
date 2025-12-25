@@ -23,25 +23,25 @@ const portfolioItems = [
     title: "Windale Project",
     desc: "This home in Windale required a new roof, fascia cover and gutters.",
     image: IMAGES.service_three,
-    link: "/portfolio/windale"
+    link: "/projects/windale"
   },
   {
     title: "Pitt Town Project",
     desc: "This stunning Hamptons style home underwent some exterior renovations, with the addition of a larger double.",
     image: IMAGES.service_four,
-    link: "/portfolio/pitt"
+    link: "/projects/pitt"
   },
   {
     title: "Valentine Project",
     desc: "Our Valentine Project consisted of a full exterior refresh for the client.",
     image: IMAGES.service_one,
-    link: "/portfolio/valentine"
+    link: "/projects/valentine"
   },
   {
     title: "Valentine Project",
     desc: "Our Valentine Project consisted of a full exterior refresh for the client.",
     image: IMAGES.service_one,
-    link: "/portfolio/project-five"
+    link: "/projects/project-five"
   },
   {
     title: "Valentine Project",

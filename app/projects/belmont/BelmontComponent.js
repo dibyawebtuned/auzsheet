@@ -52,6 +52,7 @@ const BelomntComponent = () => {
               absolute
               top-[20px] sm:top-[60px] lg:top-[60px]
               left-1/2 sm:left-3/4 transform -translate-x-1/2
+              border border-white
             bg-black text-white
               w-[90%] sm:w-[70%] lg:w-[40%]
               max-w-[800px]
