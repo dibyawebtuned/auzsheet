@@ -41,19 +41,7 @@ const portfolioItems = [
     title: "Valentine Project",
     desc: "Our Valentine Project consisted of a full exterior refresh for the client.",
     image: IMAGES.service_one,
-    link: "/projects/project-five"
-  },
-  {
-    title: "Valentine Project",
-    desc: "Our Valentine Project consisted of a full exterior refresh for the client.",
-    image: IMAGES.service_one,
-    link: "/portfolio/project-five"
-  },
-  {
-    title: "Windale Project",
-    desc: "This home in Windale required a new roof, fascia cover and gutters.",
-    image: IMAGES.service_three,
-    link: "/portfolio/project-three"
+    link: "/projects/belmont"
   },
 ];
 
