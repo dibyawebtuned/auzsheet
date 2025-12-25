@@ -20,25 +20,22 @@ const BelomntComponent = () => {
     <div className='px-3 md:px-5 lg:px-5'>
       <div className='max-w-360 mx-auto md:mx-5 lg:mx-5 xl:mx-25 mt-[100px] flex justify-center  relative rounded-[30px] overflow-hidden'>
         <div className='px-4 md:px-8 py-10 md:py-16 flex flex-col gap-[15px] sm:gap-[30px] auz_bg'>
-          {/*  */}
           <div className='flex flex-col lg:flex-row items-start lg:items-center gap-[10px] md:gap-[30px] '>
             <div className='flex-1'>
               <h2 className='host-grotesk text-black text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>
-                Projects
+                Belmont North Project
               </h2>
             </div>
 
             <div className='flex-1'>
               <span className='auz_text_gray w-[60%] host-grotesk host-grotesk-semibold text-base sm:text-[17px] lg:text-[18px] text-center leading-5'>
-                Our most recent Auzsheet Projects have assisted in transforming exterior
-                facades of sites all around Newcastle, the Hunter and Central Coast regions!
+                This stunning double story home in Belmont North was struggling with persistent leaks.
+                The owners also were seeking an exterior refresh that would suit their coastal home.
               </span>
             </div>
           </div>
 
-          {/*  */}
           <div className="relative w-full">
-            {/* Image */}
             <div className="relative h-64 sm:h-80 md:h-96 lg:h-[450px] overflow-hidden rounded-[20px]">
               <Image
                 src={IMAGES.service_one}
@@ -50,7 +47,6 @@ const BelomntComponent = () => {
               <div className="absolute inset-0 bg-black/20" />
             </div>
 
-            {/* Overlay Card */}
             <div
               className="
               absolute
@@ -64,24 +60,20 @@ const BelomntComponent = () => {
               flex flex-row gap-4
               "
             >
-              {/* Left column */}
               <div className="flex flex-col gap-2 font-semibold text-[16px] sm:text-[18px] host-grotesk">
                 <span>Manager:</span>
                 <span>Location:</span>
                 <span>Project year:</span>
               </div>
 
-              {/* Right column */}
               <div className="flex flex-col gap-2 text-[16px] sm:text-[18px] host-grotesk">
                 <span>Bryan Knight</span>
-                <span>Mexico</span>
+                <span>Australia</span>
                 <span>2024</span>
               </div>
             </div>
           </div>
 
-
-          {/* Light Box Images STARTS */}
           <div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-[30px]">
               {images.map((img, i) => (
@@ -100,7 +92,6 @@ const BelomntComponent = () => {
               ))}
             </div>
 
-            {/* Lightbox */}
             <Lightbox
               open={index >= 0}
               close={() => setIndex(-1)}
@@ -111,9 +102,7 @@ const BelomntComponent = () => {
               plugins={[Zoom]}
             />
           </div>
-          {/* Light Box Images ENDS */}
 
-          {/* Project Content STARTS */}
           <div className='flex flex-col gap-9'>
             <div>
               <h2 className='host-grotesk host-grotesk-bold text-[32px]'>Introduction</h2>
@@ -130,56 +119,55 @@ const BelomntComponent = () => {
             <div>
               <h2 className='host-grotesk host-grotesk-bold text-[28px]'>01. The Challenge</h2>
               <p className='host-grotesk host-grotesk-semibold auz_text_gray leading-5'>
-                When our power of choice is untrammelled and when nothing prevents our being able
-                to do what we like best, every pleasure is to be welcomed and every pain avoided.
-                But in certain circumstances and owing to the claims of duty or the obligations of
-                business it will frequently occur that pleasures have to be repudiated and annoyances
-                accepted. The wise man therefore always holds in these matters to this principle of
-                selection: he rejects pleasures to secure other greater pleasures, or else he endures
-                pains to avoid worse pains."
+                The existing roof was experiencing persistent leaks, particularly problematic in a coastal
+                environment where exposure to wind, rain, and salt air can accelerate wear and deterioration.
+                In addition to resolving the water ingress issues, the homeowners wanted an exterior update
+                that complemented their coastal setting—without compromising durability or requiring high
+                maintenance.
               </p>
             </div>
 
             <div>
               <h2 className='host-grotesk host-grotesk-bold text-[28px]'>02. The Solution</h2>
               <p className='host-grotesk host-grotesk-semibold auz_text_gray leading-5'>
-                Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-                eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
-                Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
-                maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                Auzsheet carried out a full new roof installation, along with fascia covers and new guttering,
+                using premium Colorbond® steel in the colour Dune. This colour was carefully selected to enhance
+                the home’s coastal character while offering excellent heat reflection and long-lasting performance.
               </p>
 
               <ul className='host-grotesk host-grotesk-semibold auz_text_gray leading-5'>
-                <li>One who avoids a pain that produces no resultant pleasure.</li>
-                <li>Laborious physical exercise.</li>
-                <li>One who avoids a pain that produces no resultant</li>
-                <li>Avoids pleasure itself, because it is.</li>
+                <li>
+                  Complete new roof installation to eliminate persistent leaks
+                </li>
+                <li>
+                  Premium Colorbond® steel roofing in the colour Dune
+                </li>
+                <li>
+                  New fascia covers and guttering for a seamless, cohesive exterior finish
+                </li>
+                <li>
+                  Colour selection tailored to suit the home’s coastal location and architectural style
+                </li>
               </ul>
             </div>
 
             <div>
               <h2 className='host-grotesk host-grotesk-bold text-[28px]'>03. The Result</h2>
               <p className='host-grotesk host-grotesk-semibold auz_text_gray leading-5'>
-                Because it is pain, but because occasionally circumstances occur in which toil
-                and pain can procure him some great pleasure. To take a trivial example, which
-                of us ever undertakes laborious physical exercise, except to obtain some advantage
-                from it? But who has any right to find fault with a man who chooses to enjoy a
-                pleasure that has no annoying consequences, or one who avoids a pain that produces
-                no resultant pleasure?"
+                The completed project delivered a striking transformation both visually and
+                functionally. The leaks were fully resolved, restoring confidence in the home’s
+                protection against the elements. The new roof, fascia, and gutters dramatically
+                improved street appeal, giving the property a fresh, modern coastal look with
+                a clean and timeless finish.
 
                 <br />
 
-                But I must explain to you how all this mistaken idea of denouncing pleasure
-                and praising pain was born and I will give you a complete account of the system,
-                and expound the actual teachings of the great explorer of the truth, the master-builder
-                of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is
-                pleasure, but because those who do not know how to pursue pleasure rationally encounter
-                consequences that are extremely painful. Nor again is there anyone who loves or pursues or
-                desires to obtain pain of itself.
+                Most importantly, the homeowners now enjoy peace of mind knowing their
+                home is protected by durable materials and expert workmanship—built to
+                perform for years to come.
               </p>
             </div>
           </div>
-          {/* Project Content ENDS */}
         </div>
       </div>
 

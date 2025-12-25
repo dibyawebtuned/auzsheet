@@ -170,8 +170,6 @@ const EdgeprotectionComponent = () => {
               {/* Right Section ENDS */}
 
 
-
-
               {/* Left Section STARTS */}
               <div className="flex-1 lg:flex-4 flex flex-col gap-[20px] lg:sticky lg:top-[100px] self-start h-fit">
 
