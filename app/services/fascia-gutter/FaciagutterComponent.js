@@ -204,6 +204,7 @@ const FaciagutterComponent = () => {
 
 
 
+
               {/* Left Section STARTS */}
               <div className="flex-1 lg:flex-4 flex flex-col gap-[20px] lg:sticky lg:top-[100px] self-start h-fit">
 
@@ -217,8 +218,8 @@ const FaciagutterComponent = () => {
                     {/* Service item */}
                     <Link href="" className="flex items-center gap-3 sm:gap-5 pb-3 sm:pb-4 border-b border-gray-400">
                       <div className='flex-1'>
-                        <h4 className="font-semibold text-[15px] sm:text-[16px]">Residential Roofing</h4>
-                        <p className="text-gray-600 text-sm sm:text-[15px]">
+                        <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">Residential Roofing</h4>
+                        <p className="text-gray-600 text-sm sm:text-[15px] host-grotesk host-grotesk-semibold">
                           High-quality roofing solutions for modern and traditional homes.
                         </p>
                       </div>
@@ -231,8 +232,8 @@ const FaciagutterComponent = () => {
                     {/* Service item */}
                     <Link href="" className="flex items-center gap-3 sm:gap-5 pb-3 sm:pb-4 border-b border-gray-400">
                       <div>
-                        <h4 className="font-semibold text-[15px] sm:text-[16px]">Roof Repairs</h4>
-                        <p className="text-gray-600 text-sm sm:text-[15px]">
+                        <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">Roof Repairs</h4>
+                        <p className="text-gray-600 text-sm sm:text-[15px] host-grotesk host-grotesk-semibold">
                           Reliable repairs to protect your home from leaks and damage.
                         </p>
                       </div>
@@ -244,8 +245,8 @@ const FaciagutterComponent = () => {
                     {/* Service item */}
                     <Link href="" className="flex items-center gap-5 pb-3 border-b border-gray-400">
                       <div>
-                        <h4 className="font-semibold text-[15px] sm:text-[16px]">Guttering & Fascia</h4>
-                        <p className="text-gray-600 text-sm sm:text-[15px]">
+                        <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">Guttering & Fascia</h4>
+                        <p className="text-gray-600 text-sm sm:text-[15px] host-grotesk host-grotesk-semibold">
                           Durable guttering systems designed for long-term performance.
                         </p>
                       </div>
@@ -257,8 +258,8 @@ const FaciagutterComponent = () => {
                     {/* Service item */}
                     <Link href="" className="flex items-center gap-5">
                       <div>
-                        <h4 className="font-semibold text-[15px] sm:text-[16px]">Maintenance</h4>
-                        <p className="text-gray-600 text-sm sm:text-[15px]">
+                        <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">Maintenance</h4>
+                        <p className="text-gray-600 text-sm sm:text-[15px] host-grotesk host-grotesk-semibold">
                           Scheduled maintenance to extend the life of your roof.
                         </p>
                       </div>

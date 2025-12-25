@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Phone, ArrowUpRight } from "lucide-react"
 
 const faqs = [
     {
@@ -28,12 +28,14 @@ const FaqSection = () => {
     const [openIndex, setOpenIndex] = useState(1)
     return (
         <div className="auz_bg">
-            <div className="max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px] flex flex-col sm:flex-row lg:gap-[50px]">
-                <div className="flex-1">
+            <div className="max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px] flex flex-col sm:flex-row gap-7 lg:gap-[50px]">
+                <div className="flex-1 flex flex-col justify-between gap-1 sm:gap-0">
                     {/* Section Heading */}
-                    <div className='flex flex-col items-start gap-[15px] mb-10'>
+                    <div className='flex flex-col items-start gap-4 sm:gap-5 lg:gap-[15px] mb-6 sm:mb-10'>
                         <div className=''>
-                            <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>Frequently Asked Questions</h2>
+                            <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>
+                                Frequently Asked Questions
+                            </h2>
                         </div>
                         <div className=''>
                             <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] text-justify leading-5'>
@@ -41,17 +43,39 @@ const FaqSection = () => {
                             </p>
                         </div>
                     </div>
+
+
+                    <div className=''>
+                        <div className='flex flex-col'>
+                            <span className="host-grotesk host-grotesk-semibold text-[20px] text-[#3D3D3D]">
+                                Still have questions?
+                            </span>
+                            <p className="host-grotesk host-grotesk-semibold text-[#797979] text-[16px]">
+                                We're here to help! Don't hesitate—ask away and get the answers you need.
+                            </p>
+                        </div>
+
+                        <div className='inline-block pt-5'>
+                            <Link
+                                href="/contact"
+                                className="group flex items-center gap-2 bg-black text-white text-[16px] font-semibold px-3 py-2 rounded-[8px] hover:bg-gray-900 transition"
+                            >
+                                Get In Touch
+                                <div className="bg-[#F4F4F4] text-black p-[10px] rounded-[4px]">
+                                    <ArrowUpRight size={16} className="arrow" />
+                                </div>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
+
 
                 <div className="flex-1">
                     {faqs.map((item, i) => {
                         const isOpen = openIndex === i
 
                         return (
-                            <div
-                                key={i}
-                                className="border-t border-gray-400 last:border-b"
-                            >
+                            <div key={i} className="border-t border-gray-400 last:border-b">
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? -1 : i)}
                                     className="w-full flex items-center justify-between py-5 text-left"
@@ -67,15 +91,7 @@ const FaqSection = () => {
                                 </button>
 
                                 {/* Animated Answer */}
-                                <div
-                                    className={`
-            overflow-hidden
-            transition-all
-            duration-500
-            ease-in-out
-            ${isOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"}
-          `}
-                                >
+                                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"} `} >
                                     <p className="pb-5 host-grotesk host-grotesk-semibold text-gray-600 leading-6 max-w-[90%]">
                                         {item.a}
                                     </p>
@@ -84,8 +100,6 @@ const FaqSection = () => {
                         )
                     })}
                 </div>
-
-
             </div>
         </div>
     )
