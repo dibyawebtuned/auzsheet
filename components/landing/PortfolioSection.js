@@ -1,9 +1,13 @@
 "use client";
 import React from 'react';
+import { useEffect } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 import { IMAGES } from '@/constants/assets';
 import { ArrowUpRight } from "lucide-react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const portfolioItems = [
@@ -58,7 +62,17 @@ const portfolioItems = [
 ];
 
 
+
 const PortfolioSection = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 700,
+            easing: "ease-in-out",
+            once: true,
+        });
+    }, []);
+
+
     return (
         <div className='auz_bg'>
             <div className='max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px]'>
@@ -79,9 +93,10 @@ const PortfolioSection = () => {
                     {portfolioItems.map((item, index) => (
                         <div
                             key={index}
-                            className="group 
-                            h-[260px] sm:h-[300px] lg:h-[366px]
-                            relative rounded-[15px] overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100}
+                            data-aos-duration="800"
+                            className="group h-[260px] sm:h-[300px] lg:h-[366px] relative rounded-[15px] overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                         >
                             {/* Image */}
                             <div className="relative w-full h-full overflow-hidden">
@@ -92,8 +107,8 @@ const PortfolioSection = () => {
                                     className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                                     quality={100}
                                     sizes="(max-width: 640px) 100vw,
-                 (max-width: 1024px) 50vw,
-                 25vw"
+                                    (max-width: 1024px) 50vw,
+                                    25vw"
                                 />
                             </div>
 

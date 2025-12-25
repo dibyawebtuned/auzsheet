@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -7,6 +7,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { IMAGES } from '@/constants/assets';
 
 import { AiFillStar, AiOutlineStar, AiFillStarHalf } from "react-icons/ai";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Helper function for dynamic stars
 const renderStars = (rating) => {
@@ -55,6 +58,15 @@ const testimonials = [
 ];
 
 const TestimonialSection = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 700,
+            easing: "ease-in-out",
+            once: true,
+        });
+    }, []);
+
+
     const settings = {
         dots: true,
         infinite: true,
@@ -86,33 +98,31 @@ const TestimonialSection = () => {
             {/* Section Heading */}
             <div className='flex flex-col lg:flex-row items-start lg:items-center gap-3 md:gap-4 lg:gap-10 mb-10'>
                 <div className='flex-1'>
-                    <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>Testimonials</h2>
+                    <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold' data-aos="fade-up" data-aos-delay="500">
+                        Testimonials
+                    </h2>
                 </div>
                 <div className='flex-1'>
-                    <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] text-justify leading-5'>
-                        Our clients’ satisfaction is our priority. Hear what they have to say about their experience with Auzsheet Roofing and Guttering, and how we have transformed their homes with quality roofing, guttering, and fascia solutions that are built to last.
+                    <p
+                        className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] text-justify leading-5'
+                        data-aos="fade-left">
+                        Our clients’ satisfaction is our priority. Hear what they have to say about their
+                        experience with Auzsheet Roofing and Guttering, and how we have transformed their
+                        homes with quality roofing, guttering, and fascia solutions that are built to last.
                     </p>
                 </div>
             </div>
 
             {/* Testimonial Content */}
-            {/* Testimonial Content */}
             <div className="flex flex-col lg:flex-row gap-6 items-stretch justify-center">
 
                 {/* Left Column */}
                 <div
-                    className="
-      flex-1
-      px-6 py-8
-      sm:px-10 sm:py-12
-      rounded-[10px]
-      bg-[#FAF3E9]
-      flex flex-col
-      items-center
-      justify-center
-      text-center
-    "
-                >
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                    data-aos-delay="100"
+                    data-aos-easing="ease-in-out"
+                    className="flex-1 px-6 py-8 sm:px-10 sm:py-12 rounded-[10px] bg-[#FAF3E9] flex flex-col items-center justify-center text-center">
                     <span className="host-grotesk host-grotesk-extra-bold text-4xl sm:text-5xl lg:text-[56px]">
                         4.9
                     </span>

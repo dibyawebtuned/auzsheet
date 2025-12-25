@@ -113,10 +113,7 @@ export default function Navbar() {
                         </Link>
 
 
-                        <Link
-                            href="/contact"
-                            className="group flex items-center gap-2 bg-black text-white text-[16px] font-semibold px-3 py-2 rounded-[8px] hover:bg-gray-900 transition"
-                        >
+                        <Link href="/contact" className="group flex items-center gap-2 bg-black text-white text-[16px] font-semibold px-3 py-2 rounded-[8px] hover:bg-gray-900 transition">
                             Get In Touch
                             <div className="bg-[#F4F4F4] text-black p-[10px] rounded-[4px]">
                                 <ArrowUpRight size={16} className="arrow" />
