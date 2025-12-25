@@ -14,7 +14,7 @@ const ContactSection = () => {
                     <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>Contact Us Today</h2>
                 </div>
                 <div className='flex-1'>
-                    <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] text-justify leading-5'>
+                    <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] leading-6'>
                         Request a fast, obligation-free quote from Auzsheet Roofing and Guttering. We proudly service Newcastle, Central Coast and Hunter Regions delivering expert advice and transparent, competitive pricing.
                     </p>
                 </div>

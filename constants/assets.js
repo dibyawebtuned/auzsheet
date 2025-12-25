@@ -12,6 +12,16 @@ import Services_One from "@/public/assets/img/service_1.png";
 import Services_Two from "@/public/assets/img/service_2.png";
 import Services_Three from "@/public/assets/img/service_3.png";
 import Services_Four from "@/public/assets/img/service_4.png";
+import Services_five from "@/public/assets/img/gallery/Twelve.jpg";
+import Services_six from "@/public/assets/img/gallery/Nine.jpg";
+
+import Sky_Installation from "@/public/assets/img/sky_lighting.png";
+import Sky_Installation_Two from "@/public/assets/img/sky_installation_two.jpg";
+
+import Metal_Cladding from "@/public/assets/img/metal_cadding.png";
+
+import Edge_Protection from "@/public/assets/img/edge_protection.png";
+import Edge_Protection_Two from "@/public/assets/img/gallery/Eleven.jpg";
 
 // Auz Sheet --> Sheet
 import Roof from "@/public/assets/img/roof.png";
@@ -32,6 +42,15 @@ export const IMAGES = {
     service_two: Services_Two,
     service_three: Services_Three,
     service_four: Services_Four,
+    service_five: Services_five,
+    service_six: Services_six,
+    sky_installtion: Sky_Installation,
+    sky_installtion_two: Sky_Installation_Two,
+
+    metal_cladding: Metal_Cladding,
+
+    edge_protection :Edge_Protection,
+    edge_protection_two :Edge_Protection_Two,
 
     // Roof
     roof: Roof,
