@@ -116,7 +116,7 @@ const TestimonialSection = () => {
             {/* Testimonial Content */}
             <div className="flex flex-col lg:flex-row gap-6 items-stretch justify-center">
 
-                {/* Left Column */}
+                {/* Left Columns */}
                 <div
                     data-aos="fade-up"
                     data-aos-duration="800"
