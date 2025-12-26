@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 const faqs = [
   {
     q: "Do you offer free quotes?",
-    a: "Yes, we provide free, no-obligation quotes for all roofing and guttering projects."
+    a: "Yes, we provide free, no-obligation quotes for all roofing and guttering projects..."
   },
   {
     q: "What areas do you service?",
