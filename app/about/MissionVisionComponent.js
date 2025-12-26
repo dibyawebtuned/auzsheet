@@ -124,7 +124,7 @@ export default function MissionVisionComponent() {
                                 {label}
                             </button>
                         ))}
-                    </div>x
+                    </div>
                 </div>
 
                 {/* ================= RIGHT CONTENT ================= */}

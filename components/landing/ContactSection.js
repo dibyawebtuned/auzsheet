@@ -1,20 +1,33 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import { IMAGES } from '@/constants/assets';
 import { ArrowUpRight } from "lucide-react";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const ContactSection = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: true,
+        });
+    }, []);
+
     return (
-        <div className="max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 pt-[80px] pb-[40px]">
+        <div className="max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 pt-[80px] pb-[40px] overflow-hidden">
             {/* Section Heading */}
             <div className='flex flex-col lg:flex-row items-start lg:items-center gap-3 md:gap-4 lg:gap-10 mb-10'>
                 <div className='flex-1'>
-                    <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>Contact Us Today</h2>
+                    <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold' data-aos="fade-up">
+                        Contact Us Today
+                    </h2>
                 </div>
                 <div className='flex-1'>
-                    <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] leading-6'>
+                    <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] leading-6' data-aos="fade-left">
                         Request a fast, obligation-free quote from Auzsheet Roofing and Guttering. We proudly service Newcastle, Central Coast and Hunter Regions delivering expert advice and transparent, competitive pricing.
                     </p>
                 </div>
@@ -23,7 +36,7 @@ const ContactSection = () => {
 
             {/* Contact Section Content */}
             <div className='flex flex-col md:flex-row gap-20 sm:gap-0'>
-                <div className="flex-1 relative">
+                <div className="flex-1 relative" data-aos="fade-up" data-aos-delay="200">
                     <Image
                         src={IMAGES.service_two}
                         alt="Roofing"
@@ -38,7 +51,7 @@ const ContactSection = () => {
                     />
                 </div>
 
-                <div className="flex-1">
+                <div className="flex-1" data-aos="fade-up" data-aos-delay="400">
                     <form className="bg-white rounded-lg p-0 sm:p-6 flex flex-col gap-4">
 
                         {/* Name + Email */}

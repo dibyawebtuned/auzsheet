@@ -1,12 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Phone, ArrowUpRight } from "lucide-react";
 
 import ButtonLink from "../ui/Button";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const slides = [
     "/assets/img/gallery/One.jpg",
@@ -26,29 +30,43 @@ const HeroSection = () => {
         arrows: false,
     };
 
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: true,
+        });
+    }, []);
+
     return (
-        <div className="w-full flex justify-center h-[80vh] lg:h-[650px] bg-gray-900 relative rounded-[30px] overflow-hidden">
+        <div className="w-full flex justify-center h-[90vh] lg:h-[650px] bg-gray-900 relative rounded-[30px] overflow-hidden">
             <div className="w-full max-w-[1440px] relative">
 
                 {/* Slider for images only */}
                 <Slider {...settings} className="h-full">
                     {slides.map((img, index) => (
-                        <div key={index} className="w-full h-[80vh] lg:h-[650px]">
+                        <div key={index} className="w-full h-[90vh] lg:h-[650px]">
                             <div className="w-full h-full bg-center bg-cover" style={{ backgroundImage: `url(${img})` }}></div>
                         </div>
                     ))}
                 </Slider>
 
                 {/* Static overlay text */}
-                <div className="absolute inset-0 bg-black/40 flex flex-col sm:flex-row gap-[20px] items-center justify-center px-4 sm:px-10 md:px-[50px] py-6 sm:py-10 gap-6">
+                <div className="absolute inset-0 bg-black/40 flex flex-col sm:flex-row sm:gap-[20px] items-center justify-center px-4 sm:px-10 md:px-[50px] py-6 sm:py-10 gap-6">
                     {/* Left */}
-                    <div className="flex-1 flex flex-col gap-4 sm:gap-6">
+                    <div className="flex-1 flex flex-col justify-center gap-4 sm:gap-6">
                         <div className="flex flex-col gap-4">
-                            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[68px] host-grotesk host-grotesk-semibold tracking-wide leading-snug sm:leading-tight">
+                            <h1 className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-[68px] host-grotesk host-grotesk-semibold tracking-wide leading-snug sm:leading-tight"
+                                data-aos="fade-up"
+                                data-aos-delay="50"
+                                data-aos-duration="1000">
                                 Committed To Quality Roofing
                             </h1>
 
-                            <p className="text-white host-grotesk auz_white_three host-grotesk-bold text-sm sm:text-base md:text-[16px] leading-relaxed sm:leading-6">
+                            <p className="text-white host-grotesk auz_white_three host-grotesk-bold text-sm sm:text-base md:text-[16px] leading-relaxed sm:leading-6"
+                                data-aos="fade-up"
+                                data-aos-delay="100"
+                                data-aos-duration="1000">
                                 We specialise in new roofs and re-roofs, using durable and stylish Colorbond® steel to protect and enhance your home for years to come.
                             </p>
                         </div>
@@ -71,7 +89,10 @@ const HeroSection = () => {
 
                     {/* Right */}
                     <div className="flex-1">
-                        <div className="px-[20px] py-[30px] rounded-[10px] bg-white/80 flex flex-col gap-5">
+                        <div className="px-[20px] py-[30px] rounded-[10px] bg-white/80 flex flex-col gap-5"
+                            data-aos="fade-left"
+                            data-aos-delay="100"
+                            data-aos-duration="1000">
                             <div className="w-[90%]">
                                 <span className="text-[26px] host-grotesk host-grotesk-bold tracking-wider leading-9">For All Your Metal Roofing Needs</span>
                             </div>

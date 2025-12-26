@@ -1,10 +1,13 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import FaqSection from '@/components/landing/FaqSection'
 import ContactSection from '@/components/landing/ContactSection'
 import { ChevronDown, Phone, ArrowUpRight } from "lucide-react"
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const faqs = [
   {
@@ -27,6 +30,14 @@ const faqs = [
 
 
 const FaqComponent = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
   const [openIndex, setOpenIndex] = useState(1)
   return (
     <>
@@ -36,7 +47,9 @@ const FaqComponent = () => {
             {/* Section Heading */}
             <div className='flex flex-col items-start gap-[15px] mb-10'>
               <div className=''>
-                <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>Frequently Asked Questions</h2>
+                <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>
+                  Frequently Asked Questions
+                </h2>
               </div>
               <div className=''>
                 <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] text-justify leading-5'>

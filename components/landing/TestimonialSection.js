@@ -98,7 +98,7 @@ const TestimonialSection = () => {
     };
 
     return (
-        <section className="max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px] flex flex-col">
+        <section className="max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px] flex flex-col overflow-hidden">
             {/* ---------------- HEADER ---------------- */}
             <div className="flex flex-col lg:flex-row gap-6 mb-12">
                 <h2 className="flex-1 host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold">

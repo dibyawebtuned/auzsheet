@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { IMAGES } from '@/constants/assets'
 import Lightbox from "yet-another-react-lightbox"
@@ -8,8 +8,20 @@ import "yet-another-react-lightbox/styles.css"
 
 import ContactSection from '@/components/landing/ContactSection'
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const PittComponent = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: true,
+        });
+    }, []);
+
+
     const [index, setIndex] = useState(-1)
 
     // Partial dynamic data
@@ -51,13 +63,13 @@ const PittComponent = () => {
                     {/* Header */}
                     <div className='flex flex-col lg:flex-row items-start lg:items-center gap-[10px] md:gap-[30px]'>
                         <div className='flex-1'>
-                            <h2 className='host-grotesk text-black text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>
+                            <h2 className='host-grotesk text-black text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold' data-aos="fade-up">
                                 {project.title}
                             </h2>
                         </div>
 
                         <div className='flex-1'>
-                            <span className='auz_text_gray w-[60%] host-grotesk host-grotesk-semibold text-base sm:text-[17px] lg:text-[18px] text-center leading-5'>
+                            <span className='auz_text_gray w-[60%] host-grotesk host-grotesk-semibold text-base sm:text-[17px] lg:text-[18px] text-center leading-5' data-aos="fade-left" data-aos-delay="200">
                                 {project.description}
                             </span>
                         </div>
@@ -89,6 +101,7 @@ const PittComponent = () => {
                                     px-4 sm:px-5 py-4 sm:py-6
                                     flex flex-row gap-4
                                     "
+                            data-aos="fade-up"
                         >
                             <div className="flex flex-col gap-2 font-semibold text-[16px] sm:text-[18px] host-grotesk">
                                 <span>Manager:</span>

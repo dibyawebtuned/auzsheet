@@ -1,9 +1,12 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ChevronDown, Phone, ArrowUpRight } from "lucide-react"
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const faqs = [
     {
@@ -26,19 +29,28 @@ const faqs = [
 
 const FaqSection = () => {
     const [openIndex, setOpenIndex] = useState(1)
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: true,
+        });
+    }, []);
+
     return (
         <div className="auz_bg">
-            <div className="max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px] flex flex-col sm:flex-row gap-7 lg:gap-[50px]">
+            <div className="max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px] flex flex-col sm:flex-row gap-7 lg:gap-[50px] overflow-hidden">
                 <div className="flex-1 flex flex-col justify-between gap-1 sm:gap-0">
                     {/* Section Heading */}
                     <div className='flex flex-col items-start gap-4 sm:gap-5 lg:gap-[15px] mb-6 sm:mb-10'>
                         <div className=''>
-                            <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>
+                            <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold' data-aos="fade-up">
                                 Frequently Asked Questions
                             </h2>
                         </div>
+
                         <div className=''>
-                            <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] text-justify leading-5'>
+                            <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] text-justify leading-5' data-aos="fade-up" data-aos-delay="100">
                                 At Auzsheet Roofing and Guttering, we know that choosing the right team for your roofing or exterior project is a big decision.
                             </p>
                         </div>
@@ -47,10 +59,10 @@ const FaqSection = () => {
 
                     <div className=''>
                         <div className='flex flex-col'>
-                            <span className="host-grotesk host-grotesk-semibold text-[20px] text-[#3D3D3D]">
+                            <span className="host-grotesk host-grotesk-semibold text-[20px] text-[#3D3D3D]" data-aos="fade-up" data-aos-delay="200">
                                 Still have questions?
                             </span>
-                            <p className="host-grotesk host-grotesk-semibold text-[#797979] text-[16px]">
+                            <p className="host-grotesk host-grotesk-semibold text-[#797979] text-[16px]" data-aos="fade-up" data-aos-delay="300">
                                 We're here to help! Don't hesitate—ask away and get the answers you need.
                             </p>
                         </div>
@@ -69,13 +81,12 @@ const FaqSection = () => {
                     </div>
                 </div>
 
-
                 <div className="flex-1">
                     {faqs.map((item, i) => {
                         const isOpen = openIndex === i
 
                         return (
-                            <div key={i} className="border-t border-gray-400 last:border-b">
+                            <div key={i} className="border-t border-gray-400 last:border-b" data-aos="fade-up">
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? -1 : i)}
                                     className="w-full flex items-center justify-between py-5 text-left"

@@ -1,6 +1,5 @@
 "use client";
-import React from 'react';
-import { useEffect } from "react";
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { IMAGES } from '@/constants/assets';
@@ -66,23 +65,24 @@ const portfolioItems = [
 const PortfolioSection = () => {
     useEffect(() => {
         AOS.init({
-            duration: 700,
+            duration: 1000,
             easing: "ease-in-out",
             once: true,
         });
     }, []);
 
-
     return (
         <div className='auz_bg'>
-            <div className='max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px]'>
+            <div className='max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25 py-[80px] overflow-hidden'>
                 {/* Section Heading */}
                 <div className='flex flex-col lg:flex-row items-start lg:items-center gap-3 md:gap-4 lg:gap-10 mb-10'>
-                    <div className='flex-1'>
-                        <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>Our Portfolio</h2>
+                    <div className='flex-1' >
+                        <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold' data-aos="fade-up">
+                            Our Portfolio
+                        </h2>
                     </div>
                     <div className='flex-1'>
-                        <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] text-justify leading-5'>
+                        <p className='m-0 host-grotesk host-grotesk-semibold auz_text_gray text-base sm:text-[17px] lg:text-[18px] text-justify leading-5' data-aos="fade-left">
                             Check out some of our recent Completed Projects
                         </p>
                     </div>

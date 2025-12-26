@@ -155,7 +155,7 @@ export default function Navbar() {
                             <div className="pl-4 py-4 flex flex-col gap-3 text-[14px] bg-black rounded-[10px]">
 
                                 <Link
-                                    href="/services/fascia"
+                                    href="/services/fascia-gutter"
                                     className="flex flex-col"
                                     onClick={() => {
                                         setMobileMenuOpen(false);
@@ -250,12 +250,12 @@ export default function Navbar() {
 
                         {/* Mobile right section */}
                         <div className="flex flex-col mt-4 gap-2">
-                            <div className="group inline-flex items-center gap-2 font-semibold text-[14px] bg-white px-3 py-2 rounded-[8px] text-black hover:bg-gray-900 transition">
+                            <Link href="tel:0466911940" className="group inline-flex items-center gap-2 font-semibold text-[14px] bg-white px-3 py-2 rounded-[8px] text-black hover:bg-gray-900 transition">
                                 <span className="bg-[#F4F4F4] p-[10px] rounded-[4px]">
                                     <Phone size={16} />
                                 </span>
                                 <span className="group-hover:text-white transition-colors">0466911940</span>
-                            </div>
+                            </Link>
 
                             <div>
                                 <Link

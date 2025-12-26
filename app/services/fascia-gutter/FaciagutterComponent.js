@@ -6,6 +6,9 @@ import { IMAGES } from '@/constants/assets'
 import { CheckCircle, Target, ArrowUpRight, Eye, Flag } from "lucide-react";
 import ContactSection from '@/components/landing/ContactSection'
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const FaciagutterComponent = () => {
   return (
     <>
@@ -15,7 +18,7 @@ const FaciagutterComponent = () => {
             {/*  */}
             <div className='flex flex-col lg:flex-row items-start lg:items-center gap-[10px] md:gap-[30px]'>
               <div className='flex-1'>
-                <h2 className='host-grotesk text-black text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>
+                <h2 className='host-grotesk text-black text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold' data-aos="fade-up">
                   Fascia cover and gutter
                 </h2>
               </div>
@@ -31,7 +34,7 @@ const FaciagutterComponent = () => {
               {/* Right Section STARTS */}
               <div className='flex-8 flex flex-col gap-5 sm:gap-7'>
                 {/* Image */}
-                <div className='w-full relative h-56 sm:h-72 md:h-80 lg:h-[400px] rounded-[20px] overflow-hidden'>
+                <div className='w-full relative h-56 sm:h-72 md:h-80 lg:h-[400px] rounded-[20px] overflow-hidden' data-aos="fade-up" data-aos-delay="100">
                   <Image
                     src={IMAGES.service_one}
                     alt="Service image"
@@ -67,12 +70,14 @@ const FaciagutterComponent = () => {
                           Building home, happy hearts
                         </span>
                       </div>
+
                       <div className='flex-1 flex items-center gap-3'>
                         <div className='p-2 rounded-[5px] bg-[#303030]'>
                           <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#faf3e9]" />
                         </div>
                         <span className='host-grotesk host-grotesk-semibold auz_text_gray leading-5'>Building home, happy hearts</span>
                       </div>
+
                     </div>
                     {/*  */}
                     <div className='flex flex-col sm:flex-row gap-3 sm:gap-5'>
@@ -82,6 +87,7 @@ const FaciagutterComponent = () => {
                         </div>
                         <span className='host-grotesk host-grotesk-semibold auz_text_gray leading-5'>Building home, happy hearts</span>
                       </div>
+
                       <div className='flex-1 flex items-center gap-3'>
                         <div className='p-2 rounded-[5px] bg-[#303030]'>
                           <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#faf3e9]" />
@@ -116,11 +122,12 @@ const FaciagutterComponent = () => {
                     <div className='flex flex-col sm:flex-row gap-6 sm:gap-10'>
                       {/* Mission Card */}
                       <div className='flex flex-col gap-4 sm:gap-3 flex-1'>
-                        <div className='inline-block'>
+                        <div className='inline-block' data-aos="fade-up">
                           <div className='inline-block bg-[#303030] p-4 items-center rounded-[10px]'>
                             <Target className="w-4 h-4 sm:w-5 sm:h-5 text-[#faf3e9]" />
                           </div>
                         </div>
+
                         <div className='flex flex-col gap-1 sm:gap-2'>
                           <h4 className='host-grotesk host-grotesk-semibold auz_text_gray leading-6 text-lg sm:text-xl lg:text-[26px]'>
                             Our Mission
@@ -132,11 +139,13 @@ const FaciagutterComponent = () => {
                       </div>
 
                       <div className='flex flex-col gap-4 sm:gap-3 flex-1'>
+
                         <div className='inline-block'>
                           <div className='inline-block bg-[#303030] p-4 items-center rounded-[10px]'>
                             <Eye className="w-4 h-4 sm:w-5 sm:h-5 text-[#faf3e9]" />
                           </div>
                         </div>
+
                         <div className='flex flex-col gap-1 sm:gap-2'>
                           <h4 className='host-grotesk host-grotesk-semibold auz_text_gray leading-6 text-lg sm:text-xl lg:text-[26px]'>
                             Our Vision
@@ -204,12 +213,11 @@ const FaciagutterComponent = () => {
 
 
 
-
               {/* Left Section STARTS */}
               <div className="flex-1 lg:flex-4 flex flex-col gap-[20px] lg:sticky lg:top-[100px] self-start h-fit">
 
                 {/* Services */}
-                <div className="bg-white rounded-[20px] p-4 sm:p-6">
+                <div className="bg-white rounded-[20px] p-4 sm:p-6" data-aos="fade-up">
                   <h2 className="host-grotesk host-grotesk-bold text-[22px] sm:text-[26px] lg:text-[28px] mb-4 sm:mb-6">
                     Services
                   </h2>
@@ -272,7 +280,7 @@ const FaciagutterComponent = () => {
 
 
                 {/* Contact form */}
-                <div className="w-full max-w-[600px] mx-auto bg-white rounded-[20px] p-4 sm:p-6">
+                <div className="w-full max-w-[600px] mx-auto bg-white rounded-[20px] p-4 sm:p-6" data-aos="fade-up" data-aos-delay="50">
                   <h3 className="host-grotesk host-grotesk-bold text-[22px] sm:text-[26px] lg:text-[28px] mb-4 sm:mb-6">
                     Get in Touch
                   </h3>

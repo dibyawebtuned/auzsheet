@@ -6,6 +6,9 @@ import { IMAGES } from '@/constants/assets'
 import { CheckCircle, Target, ArrowUpRight, Eye, Flag } from "lucide-react"
 import ContactSection from '@/components/landing/ContactSection'
 
+import AOS from "aos"
+import "aos/dist/aos.css"
+
 const EdgeprotectionComponent = () => {
   return (
     <>
@@ -15,7 +18,7 @@ const EdgeprotectionComponent = () => {
             {/*  */}
             <div className='flex flex-col lg:flex-row items-start lg:items-center gap-[10px] md:gap-[30px]'>
               <div className='flex-1'>
-                <h2 className='host-grotesk text-black text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>
+                <h2 className='host-grotesk text-black text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold' data-aos="fade-up">
                   Edge Protection Safety Rail
                 </h2>
               </div>
@@ -25,7 +28,7 @@ const EdgeprotectionComponent = () => {
               {/* Right Section STARTS */}
               <div className='flex-8 flex flex-col gap-5 sm:gap-7'>
                 {/* Image */}
-                <div className='w-full relative h-56 sm:h-72 md:h-80 lg:h-[400px] rounded-[20px] overflow-hidden'>
+                <div className='w-full relative h-56 sm:h-72 md:h-80 lg:h-[400px] rounded-[20px] overflow-hidden' data-aos="fade-up" data-aos-delay="100">
                   <Image
                     src={IMAGES.edge_protection}
                     alt="Service image"
@@ -174,7 +177,7 @@ const EdgeprotectionComponent = () => {
               <div className="flex-1 lg:flex-4 flex flex-col gap-[20px] lg:sticky lg:top-[100px] self-start h-fit">
 
                 {/* Services */}
-                <div className="bg-white rounded-[20px] p-4 sm:p-6">
+                <div className="bg-white rounded-[20px] p-4 sm:p-6" data-aos="fade-up">
                   <h2 className="host-grotesk host-grotesk-bold text-[22px] sm:text-[26px] lg:text-[28px] mb-4 sm:mb-6">
                     Services
                   </h2>
@@ -237,7 +240,7 @@ const EdgeprotectionComponent = () => {
 
 
                 {/* Contact form */}
-                <div className="w-full max-w-[600px] mx-auto bg-white rounded-[20px] p-4 sm:p-6">
+                <div className="w-full max-w-[600px] mx-auto bg-white rounded-[20px] p-4 sm:p-6" data-aos="fade-up" data-aos-delay="50">
                   <h3 className="host-grotesk host-grotesk-bold text-[22px] sm:text-[26px] lg:text-[28px] mb-4 sm:mb-6">
                     Get in Touch
                   </h3>

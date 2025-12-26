@@ -1,9 +1,12 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight } from "lucide-react"
 import { IMAGES } from '@/constants/assets'
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutHeroComponent = () => {
     return (
@@ -14,8 +17,10 @@ const AboutHeroComponent = () => {
                     <div className="flex flex-col md:flex-row gap-[30px]">
                         <div className='flex-1'>
                             <div className='flex flex-col gap-[10px]'>
-                                <h2 className='text-white host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold' data-aos="fade-up" data-aos-delay="500" >About Us</h2>
-                                <span className='auz_white_one host-grotesk host-grotesk-semibold leading-5 sm:text-justify text-base sm:text-[17px] lg:text-[18px]'>
+                                <h2 className='text-white host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold' data-aos="fade-up">
+                                    About Us
+                                </h2>
+                                <span className='auz_white_one host-grotesk host-grotesk-semibold leading-5 sm:text-justify text-base sm:text-[17px] lg:text-[18px]' data-aos="fade-up" data-aos-delay="100">
                                     At Auzsheet Roofing and Guttering, we pride ourselves on being a local,
                                     family-owned business dedicated to delivering quality roofing solutions
                                     across residential and commercial projects.
@@ -35,7 +40,7 @@ const AboutHeroComponent = () => {
                             </div>
                         </div>
 
-                        <div className='flex-1 auz_white_one host-grotesk host-grotesk-semibold'>
+                        <div className='flex-1 auz_white_one host-grotesk host-grotesk-semibold' data-aos="fade-left">
                             <p className='leading-5  mb-2 sm:text-justify text-base sm:text-[17px] lg:text-[18px]'>
                                 We specialise in new roofs and re-roofs, using durable and stylish Colorbond® steel to
                                 protect and enhance your home for years to come. Our services extend to fascia and
@@ -68,7 +73,7 @@ const AboutHeroComponent = () => {
                     rounded-[20px]
                     lg:rounded-[30px]
                     overflow-hidden'
-                    >
+                        data-aos="fade-up">
                         <Image src={IMAGES.service_one} alt="Service One"
                             fill
                             className="object-cover w-full h-full"

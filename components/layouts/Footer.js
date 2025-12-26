@@ -23,14 +23,21 @@ const Footer = () => {
                                 At Auzsheet Roofing and Guttering, we pride ourselves on being a local, family-owned business dedicated to delivering quality roofing solutions across residential and commercial projects.
                             </p>
                             <ul className="mt-6 flex gap-4">
-                                <li>
-                                    <Link href="https://www.facebook.com/people/Auzsheet-Roofing/61574151074622/" className="auz_white_social">
-                                        <FaFacebookF className="w-5 h-5" />
+                                <li className="border border-white p-2.5 rounded-full transition-all duration-300 hover:bg-white hover:scale-110 group">
+                                    <Link
+                                        href="https://www.facebook.com/people/Auzsheet-Roofing/61574151074622/"
+                                        className="flex items-center justify-center text-white"
+                                    >
+                                        <FaFacebookF className="w-5 h-5 transition-colors duration-300 group-hover:text-black" />
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link href="https://www.instagram.com/auzsheet/" className="auz_white_social">
-                                        <Instagram className="w-5 h-5" />
+
+
+                                <li className="border border-white p-2.5 rounded-full transition-all duration-300 hover:bg-white hover:scale-110 group">
+                                    <Link href="https://www.instagram.com/auzsheet/"
+                                        className="flex items-center justify-center text-white"
+                                    >
+                                        <Instagram className="w-5 h-5 transition-colors duration-300 group-hover:text-black" />
                                     </Link>
                                 </li>
                             </ul>
