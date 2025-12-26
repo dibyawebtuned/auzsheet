@@ -38,10 +38,10 @@ const ContactComponent = () => {
 
                 <div>
                   <h3 className="text-black text-xl font-semibold mb-1">VISIT US</h3>
-                  <p className="text-gray-500 mb-2 text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <p className="text-gray-500 mb-2 text-sm leading-5">
+                    Explore our office for a personalized experience and see how we create innovative solutions firsthand.
                   </p>
-                  <p className="text-black font-semibold">Australia</p>
+                  <Link href="#" className="text-black font-semibold">Australia</Link>
                 </div>
               </div>
 
@@ -53,8 +53,8 @@ const ContactComponent = () => {
 
                 <div>
                   <h3 className="text-black text-xl font-semibold mb-1">CALL US</h3>
-                  <p className="text-gray-500 mb-1 text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <p className="text-gray-500 mb-1 text-sm leading-5">
+                    Our team is ready to answer your questions and assist you with any inquiries.
                   </p>
                   <Link href="tel:0466911940" className="text-black font-semibold">+0466 911 940</Link>
                 </div>
@@ -68,10 +68,10 @@ const ContactComponent = () => {
 
                 <div>
                   <h3 className="text-black text-xl font-semibold mb-1">CONTACT US</h3>
-                  <p className="text-gray-500 mb-1 text-sm">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  <p className="text-gray-500 mb-1 text-sm leading-5">
+                    Need more information? Reach out to us via email and team will get back to you promptly.
                   </p>
-                  <p className="text-black font-semibold">auzsheetroofing@outlook.com</p>
+                  <Link href="mailto:auzsheetroofing@outlook.com" className="text-black font-semibold">auzsheetroofing@outlook.com</Link>
                 </div>
               </div>
             </div>
