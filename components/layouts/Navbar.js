@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Phone, ChevronDown, ArrowUpRight, Menu, X } from "lucide-react";
@@ -9,6 +9,21 @@ import Logo from "@/public/assets/img/logo.png";
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
+    const servicesRef = useRef < HTMLDivElement > (null);
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (servicesRef.current && !servicesRef.current.contains(event.target)) {
+                setDesktopServicesOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, 
+    []);
+
 
     return (
         <header className="fixed top-0 w-full z-50 bg-white">
