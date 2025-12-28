@@ -182,7 +182,7 @@ const NewroofComponent = () => {
 
                   <div className="flex flex-col gap-4 sm:gap-5">
                     {/* Service item */}
-                    <Link href="/services/fascia-gutter" className="flex items-center gap-3 sm:gap-5 pb-3 sm:pb-4 border-b border-gray-400">
+                    <Link href="/services/cover-gutter" className="flex items-center gap-3 sm:gap-5 pb-3 sm:pb-4 border-b border-gray-400">
                       <div className='flex-1'>
                         <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">
                           Fascia cover and gutter

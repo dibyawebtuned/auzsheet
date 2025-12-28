@@ -224,6 +224,18 @@ const NewroofComponent = () => {
                                                 <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
                                             </div>
                                         </Link>
+
+                                        <div>
+                                            <Link
+                                                href="/services"
+                                                className="group inline-flex items-center gap-2 bg-black text-white text-[14px] font-semibold px-3 py-2 rounded-[8px] transition"
+                                            >
+                                                View All Services
+                                                <div className="bg-[#F4F4F4] text-black p-[10px] rounded-[4px]">
+                                                    <ArrowUpRight className="w-4 h-4" />
+                                                </div>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
 
