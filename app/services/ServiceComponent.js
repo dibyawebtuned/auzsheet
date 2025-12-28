@@ -72,11 +72,11 @@ const services = [
 
 const ServiceComponent = () => {
     return (
-        <>
+        <div className='mx-3 md:mx-0'>
             <div className='max-w-360 mx-auto mx-3 md:mx-5 lg:mx-5 xl:mx-25 mt-[100px] flex justify-center auz_bg relative rounded-[30px] overflow-hidden'>
-                <div className='px-8 py-16 flex flex-col gap-[30px]'>
+                <div className='px-4 md:px-8 py-10 md:py-16 flex flex-col gap-[30px]'>
                     <div className='flex flex-col gap-[50px]'>
-                        <div className='flex items-center gap-[30px]'>
+                        <div className='flex flex-col sm:flex-row sm:items-center gap-[15px] sm:gap-[30px]'>
                             <div className='flex-1'>
                                 <h2 className='host-grotesk text-black text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>
                                     Services
@@ -136,7 +136,7 @@ const ServiceComponent = () => {
             </div>
 
             <ContactSection />
-        </>
+        </div>
     )
 }
 
