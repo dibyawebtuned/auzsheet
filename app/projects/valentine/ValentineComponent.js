@@ -52,7 +52,7 @@ const ValentineComponent = () => {
                     <div className="relative w-full">
                         <div className="relative h-64 sm:h-80 md:h-96 lg:h-[450px] overflow-hidden rounded-[20px]">
                             <Image
-                                src={IMAGES.sky_installtion_two}
+                                src={IMAGES.service_one}
                                 alt="Service image"
                                 fill
                                 className="object-cover"

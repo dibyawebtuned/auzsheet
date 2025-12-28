@@ -30,7 +30,7 @@ const WindaleComponent = () => {
         manager: "Bryan Knight",
         location: "Australia",
         year: "2024",
-        mainImage: IMAGES.service_one,
+        mainImage: IMAGES.service_three,
         gallery: [IMAGES.service_one, IMAGES.service_two, IMAGES.service_three],
         sections: [
             {

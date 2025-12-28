@@ -40,7 +40,7 @@ const portfolioItems = [
   {
     title: "Belmont North Project",
     desc: "Our Valentine Project consisted of a full exterior refresh for the client.",
-    image: IMAGES.service_one,
+    image: IMAGES.service_two,
     link: "/projects/belmont"
   },
 ];
