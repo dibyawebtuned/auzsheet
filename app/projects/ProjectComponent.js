@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import { IMAGES } from '@/constants/assets';
@@ -46,18 +46,19 @@ const portfolioItems = [
 ];
 
 const ProjectComponent = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   return (
     <div className='mx-3 md:mx-0'>
-      <div className='max-w-360 mx-auto mx-3 md:mx-5 lg:mx-5 xl:mx-25 mt-[100px] flex justify-center auz_bg relative rounded-[30px] overflow-hidden'>
+      <div className='max-w-360 mx-auto md:mx-5 lg:mx-5 xl:mx-25 mt-[100px] flex justify-center auz_bg relative rounded-[30px] overflow-hidden'>
         <div className='px-4 md:px-8 py-10 md:py-16 flex flex-col gap-[30px]'>
-          {/*  */}
+          {/* Header */}
           <div className='flex flex-col sm:flex-row sm:items-center gap-[15px] sm:gap-[30px]'>
             <div className='flex-1'>
               <h2 className='host-grotesk text-black text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>
                 Projects
               </h2>
             </div>
-
             <div className='flex-1'>
               <span className='auz_text_gray w-[60%] host-grotesk host-grotesk-semibold text-base sm:text-[17px] lg:text-[18px] text-center leading-5'>
                 Our most recent Auzsheet Projects have assisted in transforming exterior facades of sites all around Newcastle, the Hunter and Central Coast regions!
@@ -65,17 +66,16 @@ const ProjectComponent = () => {
             </div>
           </div>
 
-          {/*  */}
+          {/* Project Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {portfolioItems.map((item, index) => (
               <div
                 key={index}
-                className="group 
-                            h-[260px] sm:h-[300px] lg:h-[366px]
-                            relative rounded-[15px] overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                className="group relative rounded-[15px] overflow-hidden shadow-lg transition-shadow duration-300 cursor-pointer"
               >
                 {/* Image */}
-                <div className="relative w-full h-full overflow-hidden">
+                <div className="relative w-full h-[260px] sm:h-[300px] lg:h-[366px] overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -83,13 +83,16 @@ const ProjectComponent = () => {
                     className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                     quality={100}
                     sizes="(max-width: 640px) 100vw,
-                 (max-width: 1024px) 50vw,
-                 25vw"
+                           (max-width: 1024px) 50vw,
+                           25vw"
                   />
                 </div>
 
-                {/* Overlay - appears on hover */}
-                <div className="absolute bottom-0 left-0 right-0 bg-white py-4 px-3 rounded-[10px] m-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                {/* Overlay */}
+                <div
+                  className={`absolute bottom-0 left-0 right-0 bg-white py-4 px-3 rounded-[10px] m-3 transition-opacity duration-500 ease-in-out ${activeIndex === index || (typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches ? "opacity-0 group-hover:opacity-100" : "opacity-100")
+                    }`}
+                >
                   <h3 className="text-[16px] sm:text-[18px] host-grotesk host-grotesk-semibold">{item.title}</h3>
                   <p className='text-[#505050] mt-2 text-[13px] sm:text-[12px] host-grotesk host-grotesk-semibold leading-4'>{item.desc}</p>
                   <Link
