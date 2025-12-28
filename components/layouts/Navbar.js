@@ -50,7 +50,7 @@ export default function Navbar() {
                                     <div className="flex flex-col gap-3">
                                         <span className="text-gray-400 uppercase text-[10px] tracking-wider">Services</span>
                                         <div className="flex flex-col gap-3">
-                                            <Link href="/services/fascia-gutter" className="flex flex-col">
+                                            <Link href="/services/cover-gutter" className="flex flex-col">
                                                 <span className="text-white font-semibold text-[15px]">
                                                     Fascia cover and gutter
                                                 </span>

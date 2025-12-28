@@ -30,7 +30,7 @@ const EdgeprotectionComponent = () => {
                 {/* Image */}
                 <div className='w-full relative h-56 sm:h-72 md:h-80 lg:h-[400px] rounded-[20px] overflow-hidden' data-aos="fade-up" data-aos-delay="100">
                   <Image
-                    src={IMAGES.edge_protection}
+                    src={IMAGES.edge_protection_two}
                     alt="Service image"
                     fill
                     className="object-cover"
