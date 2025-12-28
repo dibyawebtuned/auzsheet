@@ -39,21 +39,23 @@ export default function Navbar() {
                                                 <span className="text-white font-semibold text-[15px]">
                                                     Fascia cover and gutter
                                                 </span>
-                                                <p className="text-[12px] text-[#898989]">Expert services for both new and existing</p>
+                                                <p className="text-[12px] text-[#898989]">
+                                                    By prioritizing meticulous planning and exceptional craftsmanship
+                                                </p>
                                             </Link>
 
                                             <Link href="/services/new-roofs" className="flex flex-col">
                                                 <span className="text-white font-semibold text-[15px]">
                                                     New Roofs and Re-Roofs
                                                 </span>
-                                                <p className="text-[12px] text-[#898989]">Expert services for both new and</p>
+                                                <p className="text-[12px] text-[#898989]">Auzsheet supplies and installs premium Colorbond® roofing for new builds</p>
                                             </Link>
 
                                             <Link href="/services/skylight" className="flex flex-col">
                                                 <span className="text-white font-semibold text-[15px]">
                                                     Skylight Installation
                                                 </span>
-                                                <p className="text-[12px] text-[#898989]">Guttering specialises in professional</p>
+                                                <p className="text-[12px] text-[#898989]">Bring the outdoors in with expertly installed skylights from Auzsheet</p>
                                             </Link>
                                         </div>
                                     </div>
@@ -69,14 +71,18 @@ export default function Navbar() {
                                                 <span className="text-white font-semibold text-[15px]">
                                                     Architectural Metal Cladding
                                                 </span>
-                                                <p className="text-[12px] text-[#898989]">Completely transform</p>
+                                                <p className="text-[12px] text-[#898989]">
+                                                    Utilising Colorbond’s® stunning range of architectural cladding
+                                                </p>
                                             </Link>
 
                                             <Link href="/services/edge-protection" className="flex flex-col">
                                                 <span className="text-white font-semibold text-[15px]">
                                                     Edge Protection Safety Rail
                                                 </span>
-                                                <p className="text-[12px] text-[#898989]">Skip the hassle of sourcing external edge</p>
+                                                <p className="text-[12px] text-[#898989]">
+                                                    Skip the hassle of sourcing external edge protection for your re-roof or new roof.
+                                                </p>
                                             </Link>
 
                                             <div>

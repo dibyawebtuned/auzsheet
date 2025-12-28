@@ -217,18 +217,20 @@ const FaciagutterComponent = () => {
               <div className="flex-1 lg:flex-4 flex flex-col gap-[20px] lg:sticky lg:top-[100px] self-start h-fit">
 
                 {/* Services */}
-                <div className="bg-white rounded-[20px] p-4 sm:p-6" data-aos="fade-up">
+                <div className="bg-white rounded-4xl p-4 sm:p-6" data-aos="fade-up">
                   <h2 className="host-grotesk host-grotesk-bold text-[22px] sm:text-[26px] lg:text-[28px] mb-4 sm:mb-6">
                     Services
                   </h2>
 
                   <div className="flex flex-col gap-4 sm:gap-5">
                     {/* Service item */}
-                    <Link href="" className="flex items-center gap-3 sm:gap-5 pb-3 sm:pb-4 border-b border-gray-400">
+                    <Link href="/services/new-roofs" className="flex items-center gap-3 sm:gap-5 pb-3 sm:pb-4 border-b border-gray-400">
                       <div className='flex-1'>
-                        <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">Residential Roofing</h4>
+                        <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">
+                          New Roofs and Re-Roofs
+                        </h4>
                         <p className="text-gray-600 text-sm sm:text-[15px] host-grotesk host-grotesk-semibold">
-                          High-quality roofing solutions for modern and traditional homes.
+                          By prioritizing meticulous planning and exceptional craftsmanship
                         </p>
                       </div>
 
@@ -238,11 +240,11 @@ const FaciagutterComponent = () => {
                     </Link>
 
                     {/* Service item */}
-                    <Link href="" className="flex items-center gap-3 sm:gap-5 pb-3 sm:pb-4 border-b border-gray-400">
+                    <Link href="/services/skylight" className="flex items-center gap-3 sm:gap-5 pb-3 sm:pb-4 border-b border-gray-400">
                       <div>
-                        <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">Roof Repairs</h4>
+                        <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">Skylight Installation</h4>
                         <p className="text-gray-600 text-sm sm:text-[15px] host-grotesk host-grotesk-semibold">
-                          Reliable repairs to protect your home from leaks and damage.
+                          Bring the outdoors in with expertly installed skylights from Auzsheet
                         </p>
                       </div>
                       <div>
@@ -251,11 +253,11 @@ const FaciagutterComponent = () => {
                     </Link>
 
                     {/* Service item */}
-                    <Link href="" className="flex items-center gap-5 pb-3 border-b border-gray-400">
+                    <Link href="/services/metal-cladding" className="flex items-center gap-5 pb-3 border-b border-gray-400">
                       <div>
-                        <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">Guttering & Fascia</h4>
+                        <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">Architectural Metal Cladding</h4>
                         <p className="text-gray-600 text-sm sm:text-[15px] host-grotesk host-grotesk-semibold">
-                          Durable guttering systems designed for long-term performance.
+                          Utilising Colorbond’s® stunning range of architectural cladding
                         </p>
                       </div>
                       <div>
@@ -264,11 +266,13 @@ const FaciagutterComponent = () => {
                     </Link>
 
                     {/* Service item */}
-                    <Link href="" className="flex items-center gap-5">
+                    <Link href="/services/edge-protection" className="flex items-center gap-5">
                       <div>
-                        <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">Maintenance</h4>
+                        <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">
+                          Edge Protection Safety Rail
+                        </h4>
                         <p className="text-gray-600 text-sm sm:text-[15px] host-grotesk host-grotesk-semibold">
-                          Scheduled maintenance to extend the life of your roof.
+                          Skip the hassle of sourcing external edge protection for your re-roof or new roof.
                         </p>
                       </div>
                       <div>
