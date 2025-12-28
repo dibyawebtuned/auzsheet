@@ -62,10 +62,10 @@ const Footer = () => {
                                 Services
                             </h3>
                             <ul className="md:mt-3 sm:mt-6 space-y-2 host-grotesk host-grotesk-medium">
-                                <li><Link href="/fascia-gutter" className="auz_white_three transition">Colorbond® Fascia</Link></li>
-                                <li><Link href="/new-roofs" className="auz_white_three transition">New Roofs</Link></li>
-                                <li><Link href="/skylight" className="auz_white_three transition">Skylight Installation</Link></li>
-                                <li><Link href="/metal-cladding" className="auz_white_three transition">Architectual Metal</Link></li>
+                                <li><Link href="/services/fascia-gutter" className="auz_white_three transition">Fascia cover and gutter</Link></li>
+                                <li><Link href="/services/new-roofs" className="auz_white_three transition">New Roofs</Link></li>
+                                <li><Link href="/services/skylight" className="auz_white_three transition">Skylight Installation</Link></li>
+                                <li><Link href="/services/metal-cladding" className="auz_white_three transition">Architectual Metal</Link></li>
                             </ul>
                         </div>
 

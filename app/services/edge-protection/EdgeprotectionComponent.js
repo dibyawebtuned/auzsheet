@@ -60,7 +60,7 @@ const EdgeprotectionComponent = () => {
                     {/*  */}
                     <div className='flex flex-col sm:flex-row gap-3 sm:gap-5'>
                       <div className='flex-1 flex items-center gap-2 sm:gap-3'>
-                        <div className='p-1.5 sm:p-2 rounded-[5px] bg-[#303030] flex-shrink-0'>
+                        <div className='p-2 rounded-[5px] bg-[#303030] flex-shrink-0'>
                           <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#faf3e9]" />
                         </div>
                         <span className='host-grotesk host-grotesk-semibold auz_text_gray leading-6'>

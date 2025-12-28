@@ -1,10 +1,10 @@
 import React from 'react'
-import FasciagutterComponent from './FasciagutterComponent'
+import NewroofComponent from './NewroofComponent'
 
 const page = () => {
     return (
         <div>
-            <FasciagutterComponent/>
+            <NewroofComponent />
         </div>
     )
 }
