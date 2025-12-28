@@ -56,7 +56,7 @@ const HeroSection = () => {
                     {/* Left */}
                     <div className="flex-1 flex flex-col justify-center gap-4 sm:gap-6">
                         <div className="flex flex-col gap-4">
-                            <h1 className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-[68px] host-grotesk host-grotesk-semibold tracking-wide leading-snug sm:leading-tight"
+                            <h1 className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-[60px] host-grotesk host-grotesk-semibold tracking-wide leading-snug sm:leading-tight"
                                 data-aos="fade-up"
                                 data-aos-delay="50"
                                 data-aos-duration="1000">
