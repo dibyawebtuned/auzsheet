@@ -13,7 +13,7 @@ const Footer = () => {
         <footer className="mb-10">
             <div className="max-w-360 mx-auto px-3 md:px-5 lg:px-5 xl:px-25">
                 <div className="bg-[#171716] mt-25 px-[15px] sm:px-[30px] pt-[70px] rounded-[20px]">
-                    <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-between sm:gap-8">
+                    <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-between gap-8">
                         {/* Logo & About */}
                         <div className="flex-2">
                             <Link href="/constants" className="w-[195px] h-[97px]">
@@ -48,7 +48,7 @@ const Footer = () => {
                             <h3 className="text-[26px] host-grotesk font-semibold auz_white_two tracking-wider">
                                 Company
                             </h3>
-                            <ul className="mt-6 space-y-2 host-grotesk host-grotesk-medium">
+                            <ul className="md:mt-3 sm:mt-6 space-y-2 host-grotesk host-grotesk-medium">
                                 <li><Link href="/about" className="auz_white_three transition">About us</Link></li>
                                 <li><Link href="/projects" className="auz_white_three transition">Portfolio</Link></li>
                                 <li><Link href="/faq" className="auz_white_three transition">FAQs</Link></li>
@@ -61,7 +61,7 @@ const Footer = () => {
                             <h3 className="text-[26px] host-grotesk font-semibold auz_white_two tracking-wider">
                                 Services
                             </h3>
-                            <ul className="mt-6 space-y-2 host-grotesk host-grotesk-medium">
+                            <ul className="md:mt-3 sm:mt-6 space-y-2 host-grotesk host-grotesk-medium">
                                 <li><Link href="/fascia-gutter" className="auz_white_three transition">Colorbond® Fascia</Link></li>
                                 <li><Link href="/new-roofs" className="auz_white_three transition">New Roofs</Link></li>
                                 <li><Link href="/skylight" className="auz_white_three transition">Skylight Installation</Link></li>
@@ -74,7 +74,7 @@ const Footer = () => {
                             <h3 className="text-[26px] host-grotesk font-semibold auz_white_two tracking-wider">
                                 Contact
                             </h3>
-                            <ul className="mt-6 space-y-2 host-grotesk host-grotesk-medium">
+                            <ul className="md:mt-3 sm:mt-6 space-y-2 host-grotesk host-grotesk-medium">
                                 <li><Link href="tel:0466911940" className="auz_white_three transition">0466 911 940</Link></li>
                                 <li><Link href="mailto:auzsheetroofing@outlook.com" className="auz_white_three transition">auzsheetroofing@outlook.com</Link></li>
                                 <li><Link href="#" className="auz_white_three transition">Australia</Link></li>
