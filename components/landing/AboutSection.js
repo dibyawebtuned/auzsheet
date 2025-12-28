@@ -54,7 +54,7 @@ const AboutSection = () => {
                             We specialise in new roofs and re-roofs, using durable and stylish Colorbond® steel to protect and enhance your home for years to come. Our services extend to fascia and gutter installations, offering both new systems and upgrades to replace leaking or outdated ones.
                         </p>
 
-                        <div className="flex gap-10 mt-5">
+                        <div className="flex gap-10 mt-5 items-center">
                             {counters.map((item, index) => (
                                 <CounterItem
                                     key={index}

@@ -29,6 +29,8 @@ import Image_3 from "@/public/assets/img/gallery/Six.jpg";
 import Image_4 from "@/public/assets/img/gallery/Ten.jpg";
 import Image_5 from "@/public/assets/img/one_1.jpg";
 import Image_6 from "@/public/assets/img/gallery/Five.jpg";
+import Image_7 from "@/public/assets/img/gallery/Seven.jpg";
+import Image_8 from "@/public/assets/img/gallery/One.jpg";
 
 // Auz Sheet --> Sheet
 import Roof from "@/public/assets/img/roof.png";
@@ -64,6 +66,8 @@ export const IMAGES = {
     image_4: Image_4,
     image_5: Image_5,
     image_6: Image_6,
+    image_7: Image_7,
+    image_8: Image_8,
 
     // Roof
     roof: Roof,

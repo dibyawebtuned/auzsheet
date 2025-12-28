@@ -36,8 +36,8 @@ const BeforeAfterSection = () => {
 
             <div className="w-full h-[430px] aspect-[16/9] rounded-xl overflow-hidden border">
                 <ImageComparisonSlider
-                    leftImage={IMAGES.service_one.src}
-                    rightImage={IMAGES.service_two.src}
+                    leftImage={IMAGES.image_7.src}
+                    rightImage={IMAGES.image_8.src}
                     altLeft="Before renovation"
                     altRight="After renovation"
                 />
