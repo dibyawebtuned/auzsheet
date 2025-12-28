@@ -14,7 +14,7 @@ const ContactComponent = () => {
       {/*  */}
       <div className='mx-3 md:mx-0'>
         <div className='max-w-360 mx-auto mx-3 md:mx-5 lg:mx-5 xl:mx-25 mt-[100px] flex justify-center auz_bg relative rounded-[30px] overflow-hidden'>
-          <div className='px-4 md:px-8 py-10 md:py-16 flex flex-col gap-[15px] sm:gap-[30px]'>
+          <div className='px-4 md:px-8 py-10 md:py-16 flex flex-col gap-[20px] sm:gap-[30px]'>
             {/*  */}
             <div className='flex flex-col sm:flex-row sm:items-center gap-[15px] sm:gap-[30px]'>
               <div className='flex-1'>
@@ -33,49 +33,49 @@ const ContactComponent = () => {
             </div>
 
             {/* Contact Informations */}
-            <div className="flex flex-col md:flex-row justify-center items-start md:items-stretch">
+            <div className="flex flex-col gap-7 sm:gap-0 md:flex-row justify-center items-start md:items-stretch">
               {/* Visit Us */}
-              <div className="flex-1 flex flex-col gap-4 sm:gap-7 items-center text-center p-6 sm:border-r sm:border-[#505050]" data-aos="fade-up">
+              <div className="flex-1 flex flex-col gap-3 sm:gap-7 sm:items-center text-center p-1 sm:p-6 sm:border-r sm:border-[#505050]" data-aos="fade-up">
                 <div className='bg-black w-12 h-12 rounded-[10px] flex items-center justify-center'>
                   <Home className="text-[#faf3e9] w-6 h-6" />
                 </div>
 
                 <div>
-                  <h3 className="text-black text-xl font-semibold mb-1">VISIT US</h3>
-                  <p className="text-gray-500 mb-2 text-sm leading-5">
+                  <h3 className="text-black text-xl font-semibold mb-1 text-start sm:text-center">VISIT US</h3>
+                  <p className="text-gray-500 mb-2 text-sm leading-5 text-start sm:text-center">
                     Explore our office for a personalized experience and see how we create innovative solutions firsthand.
                   </p>
-                  <Link href="#" className="text-black font-semibold">Australia</Link>
+                  <Link href="#" className="text-black font-semibold flex text-start sm:text-center">Australia</Link>
                 </div>
               </div>
 
               {/* Call Us */}
-              <div className="flex-1 flex flex-col gap-4 sm:gap-7 items-center text-center p-6 sm:border-r sm:border-[#505050]" data-aos="fade-up" data-aos-delay="100">
+              <div className="flex-1 flex flex-col gap-3 sm:gap-7 sm:items-center text-center p-1 sm:p-6 sm:border-r sm:border-[#505050]" data-aos="fade-up" data-aos-delay="100">
                 <div className='bg-black w-12 h-12 rounded-[10px] flex items-center justify-center'>
                   <Phone className="text-[#faf3e9] w-6 h-6" />
                 </div>
 
                 <div>
-                  <h3 className="text-black text-xl font-semibold mb-1">CALL US</h3>
-                  <p className="text-gray-500 mb-1 text-sm leading-5">
+                  <h3 className="text-black text-xl font-semibold mb-1 text-start sm:text-center">CALL US</h3>
+                  <p className="text-gray-500 mb-1 text-sm leading-5 text-start sm:text-center">
                     Our team is ready to answer your questions and assist you with any inquiries.
                   </p>
-                  <Link href="tel:0466911940" className="text-black font-semibold">+0466 911 940</Link>
+                  <Link href="tel:0466911940" className="text-black font-semibold flex text-start sm:text-center">+0466 911 940</Link>
                 </div>
               </div>
 
               {/* Contact Us */}
-              <div className="flex-1 flex flex-col gap-4 sm:gap-7 items-center text-center p-6" data-aos="fade-up" data-aos-delay="150">
+              <div className="flex-1 flex flex-col gap-3 sm:gap-7 sm:items-center text-center p-1 sm:p-6" data-aos="fade-up" data-aos-delay="150">
                 <div className='bg-black w-12 h-12 rounded-[10px] flex items-center justify-center'>
                   <Mail className="text-[#faf3e9] w-6 h-6" />
                 </div>
 
                 <div>
-                  <h3 className="text-black text-xl font-semibold mb-1">CONTACT US</h3>
-                  <p className="text-gray-500 mb-1 text-sm leading-5">
+                  <h3 className="text-black text-xl font-semibold mb-1 text-start sm:text-center">CONTACT US</h3>
+                  <p className="text-gray-500 mb-1 text-sm leading-5 text-start sm:text-center">
                     Need more information? Reach out to us via email and team will get back to you promptly.
                   </p>
-                  <Link href="mailto:auzsheetroofing@outlook.com" className="text-black font-semibold">auzsheetroofing@outlook.com</Link>
+                  <Link href="mailto:auzsheetroofing@outlook.com" className="text-black font-semibold flex text-start sm:text-center">auzsheetroofing@outlook.com</Link>
                 </div>
               </div>
             </div>

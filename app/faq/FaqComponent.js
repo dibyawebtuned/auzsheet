@@ -40,12 +40,12 @@ const FaqComponent = () => {
 
   const [openIndex, setOpenIndex] = useState(1)
   return (
-    <>
+    <div className='mx-3 md:mx-0'>
       <div className="max-w-360 mx-auto mx-3 md:mx-5 lg:mx-5 xl:mx-25 mt-[100px] auz_bg relative rounded-[30px] overflow-hidden">
-        <div className='px-8 py-16 flex gap-[30px]'>
+        <div className='px-4 sm:px-8 py-10 md:py-16 flex flex-col md:flex-row gap-[30px]'>
           <div className="flex-1 flex flex-col justify-between gap-1 sm:gap-0">
             {/* Section Heading */}
-            <div className='flex flex-col items-start gap-[15px] mb-10'>
+            <div className='flex flex-col items-start gap-[15px] mb-5 sm:mb-10'>
               <div className=''>
                 <h2 className='host-grotesk text-3xl sm:text-4xl lg:text-[43px] host-grotesk-semibold'>
                   Frequently Asked Questions
@@ -57,7 +57,6 @@ const FaqComponent = () => {
                 </p>
               </div>
             </div>
-
 
             <div className=''>
               <div className='flex flex-col'>
@@ -117,7 +116,7 @@ const FaqComponent = () => {
       </div>
 
       <ContactSection />
-    </>
+    </div>
   )
 }
 
