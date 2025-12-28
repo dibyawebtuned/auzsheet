@@ -138,11 +138,7 @@ export default function Navbar() {
                         <Link href="/about" onClick={() => setMobileMenuOpen(false)}>ABOUT</Link>
 
                         {/* Mobile SERVICES dropdown */}
-                        {/* Mobile SERVICES dropdown */}
-                        <button
-                            className="flex items-center justify-between py-2 w-full text-left"
-                            onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                        >
+                        <button className="flex items-center justify-between py-2 w-full text-left" onClick={() => setMobileServicesOpen(!mobileServicesOpen)} >
                             <span>SERVICES</span>
                             <ChevronDown
                                 size={16}
@@ -249,7 +245,7 @@ export default function Navbar() {
                         <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>CONTACT</Link>
 
                         {/* Mobile right section */}
-                        <div className="flex flex-col mt-4 gap-2">
+                        <div className="flex flex-col sm:mt-4 gap-3 sm:gap-2">
                             <Link href="tel:0466911940" className="group inline-flex items-center gap-2 font-semibold text-[14px] bg-white px-3 py-2 rounded-[8px] text-black hover:bg-gray-900 transition">
                                 <span className="bg-[#F4F4F4] p-[10px] rounded-[4px]">
                                     <Phone size={16} />
