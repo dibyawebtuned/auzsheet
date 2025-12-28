@@ -40,12 +40,14 @@ const ContactComponent = () => {
                   <Home className="text-[#faf3e9] w-6 h-6" />
                 </div>
 
-                <div>
-                  <h3 className="text-black text-xl font-semibold mb-1 text-start sm:text-center">VISIT US</h3>
-                  <p className="text-gray-500 mb-2 text-sm leading-5 text-start sm:text-center">
+                <div className='flex flex-col sm:items-center '>
+                  <h3 className="text-black text-xl host-grotesk host-grotesk-semibold mb-1 text-start sm:text-center">VISIT US</h3>
+                  <p className="host-grotesk text-gray-500 mb-2 text-sm leading-5 text-start sm:text-center">
                     Explore our office for a personalized experience and see how we create innovative solutions firsthand.
                   </p>
-                  <Link href="#" className="text-black font-semibold flex text-start sm:text-center">Australia</Link>
+                  <div className='flex'>
+                    <Link href="#" className="host-grotesk text-black host-grotesk-semibold">Australia</Link>
+                  </div>
                 </div>
               </div>
 
@@ -55,12 +57,14 @@ const ContactComponent = () => {
                   <Phone className="text-[#faf3e9] w-6 h-6" />
                 </div>
 
-                <div>
-                  <h3 className="text-black text-xl font-semibold mb-1 text-start sm:text-center">CALL US</h3>
-                  <p className="text-gray-500 mb-1 text-sm leading-5 text-start sm:text-center">
-                    Our team is ready to answer your questions and assist you with any inquiries.
+                <div className='flex flex-col sm:items-center '>
+                  <h3 className="text-black text-xl font-semibold mb-1 text-start sm:text-center host-grotesk host-grotesk-semibold">CALL US</h3>
+                  <p className="host-grotesk text-gray-500 mb-1 text-sm leading-5 text-start sm:text-center">
+                    Our team is ready to answer your questions and assist you with any inquiries. Reach out now.
                   </p>
-                  <Link href="tel:0466911940" className="text-black font-semibold flex text-start sm:text-center">+0466 911 940</Link>
+                  <div className='flex'>
+                    <Link href="tel:0466911940" className="text-black font-semibold flex text-start sm:text-center host-grotesk host-grotesk-semibold">+0466 911 940</Link>
+                  </div>
                 </div>
               </div>
 
@@ -70,12 +74,14 @@ const ContactComponent = () => {
                   <Mail className="text-[#faf3e9] w-6 h-6" />
                 </div>
 
-                <div>
-                  <h3 className="text-black text-xl font-semibold mb-1 text-start sm:text-center">CONTACT US</h3>
-                  <p className="text-gray-500 mb-1 text-sm leading-5 text-start sm:text-center">
-                    Need more information? Reach out to us via email and team will get back to you promptly.
+                <div className='flex flex-col sm:items-center'>
+                  <h3 className="text-black text-xl font-semibold mb-1 text-start sm:text-center host-grotesk host-grotesk-semibold">CONTACT US</h3>
+                  <p className="host-grotesk text-gray-500 mb-1 text-sm leading-5 text-start sm:text-center">
+                    Need more information? Reach out to us via email, and our team will get back to you as soon as possible.
                   </p>
-                  <Link href="mailto:auzsheetroofing@outlook.com" className="text-black font-semibold flex text-start sm:text-center">auzsheetroofing@outlook.com</Link>
+                  <div className='flex'>
+                    <Link href="mailto:auzsheetroofing@outlook.com" className="text-black font-semibold flex text-start sm:text-center host-grotesk host-grotesk-semibold">auzsheetroofing@outlook.com</Link>
+                  </div>
                 </div>
               </div>
             </div>
