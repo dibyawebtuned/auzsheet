@@ -8,41 +8,53 @@ import ContactSection from '@/components/landing/ContactSection';
 
 const portfolioItems = [
   {
-    title: "Valentine Project",
-    desc: "Our Valentine Project consisted of a full exterior refresh for the client.",
-    image: IMAGES.service_one,
-    link: "/projects/valentine"
-  },
-  {
-    title: "Belmont North Project",
-    desc: "Utilising range of architectural cladding, Auzsheet Roofing and Guttering can completely transform",
-    image: IMAGES.service_two,
-    link: "/projects/belmont"
-  },
-  {
-    title: "Windale Project",
-    desc: "This home in Windale required a new roof, fascia cover and gutters.",
-    image: IMAGES.service_three,
-    link: "/projects/windale"
-  },
-  {
-    title: "Pitt Town Project",
-    desc: "This stunning Hamptons style home underwent some exterior renovations, with the addition of a larger double.",
-    image: IMAGES.service_four,
-    link: "/projects/pitt"
-  },
-  {
-    title: "Valentine Project",
-    desc: "Our Valentine Project consisted of a full exterior refresh for the client.",
-    image: IMAGES.service_one,
-    link: "/projects/valentine"
-  },
-  {
-    title: "Belmont North Project",
-    desc: "Our Valentine Project consisted of a full exterior refresh for the client.",
-    image: IMAGES.service_two,
-    link: "/projects/belmont"
-  },
+        title: "Valentine Project",
+        desc: "Our Valentine Project consisted of a full exterior refresh for the client.",
+        image: IMAGES.service_one,
+        link: "/projects/valentine"
+    },
+    {
+        title: "Belmont North Project",
+        desc: "Utilising range of architectural cladding, Auzsheet Roofing and Guttering can completely transform",
+        image: IMAGES.service_two,
+        link: "/projects/belmont"
+    },
+    {
+        title: "Windale Project",
+        desc: "This home in Windale required a new roof, fascia cover and gutters.",
+        image: IMAGES.service_three,
+        link: "/projects/windale"
+    },
+    {
+        title: "Pitt Town Project",
+        desc: "This stunning Hamptons style home underwent some exterior renovations, with the addition of a larger double.",
+        image: IMAGES.service_four,
+        link: "/projects/pitt"
+    },
+    {
+        title: "Windale Project",
+        desc: "This home in Windale required a new roof, fascia cover and gutters.",
+        image: IMAGES.service_three,
+        link: "/projects/windale"
+    },
+    {
+        title: "Valentine Project",
+        desc: "Our Valentine Project consisted of a full exterior refresh for the client.",
+        image: IMAGES.service_one,
+        link: "/portfolio/project-five"
+    },
+    {
+        title: "Belmont North Project",
+        desc: "Utilising range of architectural cladding, Auzsheet Roofing and Guttering can completely transform",
+        image: IMAGES.service_two,
+        link: "/projects/belmont"
+    },
+    {
+        title: "Windale Project",
+        desc: "This home in Windale required a new roof, fascia cover and gutters.",
+        image: IMAGES.service_three,
+        link: "/portfolio/project-three"
+    },
 ];
 
 const ProjectComponent = () => {
