@@ -27,7 +27,7 @@ const DownpipeComponent = () => {
                 {/* Image */}
                 <div className='w-full relative h-56 sm:h-72 md:h-80 lg:h-[400px] rounded-[20px] overflow-hidden' data-aos="fade-up" data-aos-delay="100">
                   <Image
-                    src={IMAGES.service_five}
+                    src={IMAGES.image_1}
                     alt="Service image"
                     fill
                     className="object-cover"
@@ -102,8 +102,8 @@ const DownpipeComponent = () => {
 
                       <br />
 
-                      At Auzsheet, we understand that your home is one of your most important investments.
-                      That’s why we combine premium materials, expert workmanship, and a personalised approach on every project.
+                      {/* At Auzsheet, we understand that your home is one of your most important investments.
+                      That’s why we combine premium materials, expert workmanship, and a personalised approach on every project. */}
                     </p>
                   </div>
 
@@ -152,7 +152,7 @@ const DownpipeComponent = () => {
                   {/* Image and Planning */}
                   <div className='flex flex-col gap-[40]'>
                     <div className='relative h-52 sm:h-64 md:h-72 lg:h-[350px] overflow-hidden rounded-[20px]'>
-                      <Image src={IMAGES.service_six}
+                      <Image src={IMAGES.image_2}
                         alt="Service image"
                         fill
                         className="object-cover"
@@ -178,7 +178,7 @@ const DownpipeComponent = () => {
 
                   <div className="flex flex-col gap-4 sm:gap-5">
                     {/* Service item */}
-                    <Link href="/services/fascia-gutter" className="flex items-center gap-3 sm:gap-5 pb-3 sm:pb-4 border-b border-gray-400">
+                    <Link href="/services/cover-gutter" className="flex items-center gap-3 sm:gap-5 pb-3 sm:pb-4 border-b border-gray-400">
                       <div className='flex-1'>
                         <h4 className="host-grotesk host-grotesk-semibold text-[17px] sm:text-[18px]">
                           Fascia cover and gutter

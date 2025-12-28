@@ -40,31 +40,31 @@ const services = [
     {
         title: "Insulated paneling",
         description: "Utilising range of architectural cladding, Auzsheet Roofing and Guttering can completely transform",
-        image: IMAGES.service_four,
+        image: IMAGES.image_5,
         link: "/services/insulated-paneling",
     },
     {
         title: "Fascia and gutter",
         description: "Utilising range of architectural cladding, Auzsheet Roofing and Guttering can completely transform",
-        image: IMAGES.service_four,
+        image: IMAGES.image_6,
         link: "/services/fascia-gutter",
     },
     {
         title: "Downpipes",
         description: "Utilising range of architectural cladding, Auzsheet Roofing and Guttering can completely transform",
-        image: IMAGES.service_four,
+        image: IMAGES.image_1,
         link: "/services/downpipes",
     },
     {
         title: "New roofs",
         description: "Utilising range of architectural cladding, Auzsheet Roofing and Guttering can completely transform",
-        image: IMAGES.service_four,
+        image: IMAGES.image_3,
         link: "/services/new-roof",
     },
     {
         title: "Re roofs",
         description: "Utilising range of architectural cladding, Auzsheet Roofing and Guttering can completely transform",
-        image: IMAGES.service_four,
+        image: IMAGES.image_4,
         link: "/services/re-roof",
     },
 ];

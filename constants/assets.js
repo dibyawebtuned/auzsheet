@@ -23,6 +23,13 @@ import Metal_Cladding from "@/public/assets/img/metal_cadding.png";
 import Edge_Protection from "@/public/assets/img/edge_protection.png";
 import Edge_Protection_Two from "@/public/assets/img/gallery/Eleven.jpg";
 
+import Image_1 from "@/public/assets/img/gallery/Fourteen.jpg";
+import Image_2 from "@/public/assets/img/gallery/Thirteen.jpg";
+import Image_3 from "@/public/assets/img/gallery/Six.jpg";
+import Image_4 from "@/public/assets/img/gallery/Ten.jpg";
+import Image_5 from "@/public/assets/img/one_1.jpg";
+import Image_6 from "@/public/assets/img/gallery/Five.jpg";
+
 // Auz Sheet --> Sheet
 import Roof from "@/public/assets/img/roof.png";
 
@@ -49,8 +56,14 @@ export const IMAGES = {
 
     metal_cladding: Metal_Cladding,
 
-    edge_protection :Edge_Protection,
-    edge_protection_two :Edge_Protection_Two,
+    edge_protection: Edge_Protection,
+    edge_protection_two: Edge_Protection_Two,
+    image_1: Image_1,
+    image_2: Image_2,
+    image_3: Image_3,
+    image_4: Image_4,
+    image_5: Image_5,
+    image_6: Image_6,
 
     // Roof
     roof: Roof,

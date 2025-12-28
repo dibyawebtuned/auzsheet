@@ -27,7 +27,7 @@ const InsulatedpanelingComponent = () => {
                 {/* Image */}
                 <div className='w-full relative h-56 sm:h-72 md:h-80 lg:h-[400px] rounded-[20px] overflow-hidden' data-aos="fade-up" data-aos-delay="100">
                   <Image
-                    src={IMAGES.service_five}
+                    src={IMAGES.image_5}
                     alt="Service image"
                     fill
                     className="object-cover"
