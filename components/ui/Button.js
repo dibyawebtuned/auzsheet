@@ -11,8 +11,8 @@ const ButtonLink = ({
     // Colors
     bgColor = "bg-black",
     textColor = "text-white",
-    hoverTextColor = "text-white",
-    hoverBgColor = "hover:bg-gray-900",
+    // hoverTextColor = "text-white",
+    // hoverBgColor = "hover:bg-gray-900",
 
     iconBgColor = "bg-[#F4F4F4]",
     iconTextColor = "text-black",
@@ -29,8 +29,7 @@ const ButtonLink = ({
         transition-all duration-300
         ${bgColor} 
         ${textColor} 
-        ${hoverTextColor} 
-        ${hoverBgColor}
+        
         ${className}
       `}
         >
