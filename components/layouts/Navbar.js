@@ -9,20 +9,25 @@ import Logo from "@/public/assets/img/logo.png";
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+    const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
 
-    const servicesRef = useRef < HTMLDivElement > (null);
+    const servicesRef = useRef(null);
 
-    // Close dropdown when clicking outside
+    // Close desktop dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (servicesRef.current && !servicesRef.current.contains(event.target)) {
+            if (
+                servicesRef.current &&
+                !servicesRef.current.contains(event.target)
+            ) {
                 setDesktopServicesOpen(false);
             }
         };
+
         document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, 
-    []);
+        return () =>
+            document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
 
 
     return (

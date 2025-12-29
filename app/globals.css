@@ -317,3 +317,26 @@ body {
 
 
 
+
+
+
+
+/* Fix for vertical stacking in Slick */
+.custom-testimonial-slider .slick-track {
+    display: flex !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.custom-testimonial-slider .slick-slide {
+    height: inherit !important;
+    display: flex !important;
+    justify-content: center;
+}
+
+/* Force 100% width on mobile if it tries to show two */
+@media (max-width: 767px) {
+    .custom-testimonial-slider .slick-slide {
+        width: 100vw !important; 
+    }
+}
