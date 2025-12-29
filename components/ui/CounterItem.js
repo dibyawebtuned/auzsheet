@@ -10,6 +10,7 @@ const CounterItem = ({ end, suffix = "", label }) => {
     return (
         <div ref={ref} className="flex flex-col items-center">
             <span className="
+            text-center
             host-grotesk 
             text-3xl
           sm:text-4xl
@@ -22,6 +23,7 @@ const CounterItem = ({ end, suffix = "", label }) => {
                 {suffix}
             </span>
             <span className="text-[#505050] 
+            text-center
             host-grotesk 
             host-grotesk-semibold 
             text-sm
