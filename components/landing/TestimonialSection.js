@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Star } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { IMAGES } from "@/constants/assets";
+
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,21 +14,21 @@ const testimonials = [
     {
         name: "Jane Smith",
         role: "Property Owner",
-        image: "/assets/img/testimonial-1.jpg",
+        image: IMAGES.service_three,
         rating: 5,
         text: "Very satisfied with the roofing and guttering services. Highly recommend!",
     },
     {
         name: "Michael Brown",
         role: "Builder",
-        image: "/assets/img/testimonial-2.jpg",
+        image: IMAGES.service_one,
         rating: 4,
         text: "Top-quality service and materials. Delivered on time and exceeded expectations.",
     },
     {
         name: "Emma Wilson",
         role: "Home Owner",
-        image: "/assets/img/testimonial-3.jpg",
+        image: IMAGES.service_two,
         rating: 5,
         text: "Outstanding workmanship and attention to detail. Couldn't be happier!",
     },
@@ -77,12 +79,16 @@ export default function Testimonials() {
                     <div className="lg:col-span-2">
                         <Swiper
                             modules={[Pagination]}
+                            // pagination={{
+                            //     clickable: true,
+                            //     bulletClass:
+                            //         "swiper-pagination-bullet !bg-gray-400 !opacity-100",
+                            //     bulletActiveClass:
+                            //         "!bg-gray-900 !w-6 !rounded-full",  
+                            // }}
                             pagination={{
+                                el: ".custom-swiper-pagination",
                                 clickable: true,
-                                bulletClass:
-                                    "swiper-pagination-bullet !bg-gray-400 !opacity-100",
-                                bulletActiveClass:
-                                    "!bg-gray-900 !w-6 !rounded-full",
                             }}
                             spaceBetween={20}
                             slidesPerView={1}
@@ -93,13 +99,16 @@ export default function Testimonials() {
                             }}
                             className="pb-10"
                         >
+                            <div className="custom-swiper-pagination mt-8 flex justify-center gap-3" />
+
                             {testimonials.map((item, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className="h-full bg-gradient-to-br from-black to-neutral-900 rounded-3xl p-6 text-white flex flex-col justify-between">
+                                    <div className="h-full bg-gradient-to-br from-black to-neutral-900 rounded-3xl p-6 text-white flex flex-col gap-5 justify-between">
                                         {/* Top */}
-                                        <div className="flex items-start justify-between">
-                                            <div className="flex items-center gap-4">
-                                                <div className="relative w-16 h-16 rounded-xl overflow-hidden">
+                                        <div className="rounded-xl flex flex-col gap-4 h-full">
+                                            <div className="flex flex-col gap-4">
+                                                {/* Image */}
+                                                <div className="relative w-[120px] h-[100px] rounded-lg overflow-hidden">
                                                     <Image
                                                         src={item.image}
                                                         alt={item.name}
@@ -108,28 +117,33 @@ export default function Testimonials() {
                                                     />
                                                 </div>
 
-                                                <div>
-                                                    <h4 className="text-lg font-semibold">{item.name}</h4>
-                                                    <p className="text-gray-400 text-sm">{item.role}</p>
+                                                <div className="flex justify-between items-center gap-3">
+                                                    <div>
+                                                        <h4 className="host-grotesk host-grotesk-semibold text-lg sm:text-[22px] text-white">
+                                                            {item.name}
+                                                        </h4>
+                                                        <p className="host-grotesk host-grotesk-semibold text-xs sm:text-[14px] text-[#9F9F9F]">
+                                                            {item.role}
+                                                        </p>
+                                                    </div>
+                                                    {/* Stars */}
+                                                    <div className="flex gap-1">
+                                                        {[...Array(5)].map((_, i) => (
+                                                            <Star
+                                                                key={i}
+                                                                className={`w-4 h-4 ${i < item.rating
+                                                                    ? "fill-white stroke-white"
+                                                                    : "stroke-gray-600"
+                                                                    }`}
+                                                            />
+                                                        ))}
+                                                    </div>
                                                 </div>
-                                            </div>
-
-                                            {/* Stars */}
-                                            <div className="flex gap-1">
-                                                {[...Array(5)].map((_, i) => (
-                                                    <Star
-                                                        key={i}
-                                                        className={`w-4 h-4 ${i < item.rating
-                                                            ? "fill-white stroke-white"
-                                                            : "stroke-gray-600"
-                                                            }`}
-                                                    />
-                                                ))}
                                             </div>
                                         </div>
 
                                         {/* Text */}
-                                        <p className="text-gray-300 mt-6 leading-relaxed">
+                                        <p className="host-grotesk host-grotesk-semibold text-white text-sm sm:text-[16px] leading-relaxed">
                                             {item.text}
                                         </p>
                                     </div>

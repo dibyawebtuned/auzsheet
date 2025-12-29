@@ -320,23 +320,17 @@ body {
 
 
 
-
-/* Fix for vertical stacking in Slick */
-.custom-testimonial-slider .slick-track {
-    display: flex !important;
-    margin-left: 0;
-    margin-right: 0;
+/* Swiper pagination dots */
+.custom-swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #9ca3af; /* gray-400 */
+  opacity: 1;
+  transition: all 0.3s ease;
 }
 
-.custom-testimonial-slider .slick-slide {
-    height: inherit !important;
-    display: flex !important;
-    justify-content: center;
-}
-
-/* Force 100% width on mobile if it tries to show two */
-@media (max-width: 767px) {
-    .custom-testimonial-slider .slick-slide {
-        width: 100vw !important; 
-    }
+.custom-swiper-pagination .swiper-pagination-bullet-active {
+  width: 26px;
+  border-radius: 9999px;
+  background-color: #111827; /* gray-900 */
 }
